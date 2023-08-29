@@ -278,5 +278,59 @@ S_{\text{impure}}=-k_{B}\left[3/4\cdot\ln3/4+1/4\cdot\ln1/4\right]\approx0.562k_
 
 \end_layout
 
+\begin_layout Subsubsection*
+(e) Thermal state
+\end_layout
+
+\begin_layout Standard
+In this case, we only consider two state 
+\begin_inset Formula $\left|g\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $\left|e\right\rangle $
+\end_inset
+
+, with energy 0 and 1.
+ 
+\begin_inset Formula 
+\begin{equation}
+\rho=\frac{1}{Z}\left(\left|g\right\rangle \left\langle g\right|+e^{-1/k_{B}T}\left|e\right\rangle \left\langle e\right|\right)
+\end{equation}
+
+\end_inset
+
+At 
+\begin_inset Formula $T=0$
+\end_inset
+
+, 
+\begin_inset Formula $e^{-1/k_{B}T}\rightarrow0$
+\end_inset
+
+ and the population is purely in the ground state.
+ As 
+\begin_inset Formula $T\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $e^{-1/k_{B}T}\rightarrow1$
+\end_inset
+
+ and the density matrix is a statistical mixture of ground and excited.
+ 
+\begin_inset Formula 
+\begin{equation}
+\rho_{T\rightarrow\infty}=\left(\begin{array}{cc}
+1/2 & 0\\
+0 & 1/2
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
