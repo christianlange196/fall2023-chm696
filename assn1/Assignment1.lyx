@@ -1,0 +1,282 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Optics Assignment 1
+\end_layout
+
+\begin_layout Author
+Christian
+\end_layout
+
+\begin_layout Section
+Typical photon energies
+\end_layout
+
+\begin_layout Subsection*
+(a)
+\end_layout
+
+\begin_layout Section
+Mechanical velocity and electromagnetic fields in quantum mechanics
+\end_layout
+
+\begin_layout Section
+Density matrices
+\end_layout
+
+\begin_layout Subsubsection*
+(a) Pure ensemble
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left|\psi\right\rangle  & =\left(\begin{array}{c}
+\sqrt{3/4}\\
+-i/2
+\end{array}\right)\\
+\left\langle \psi\right| & =\left(\begin{array}{cc}
+\sqrt{3/4} & i/2\end{array}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\rho_{\text{pure}}=\left|\psi\right\rangle \left\langle \psi\right|=\left(\begin{array}{cc}
+3/4 & i\sqrt{3}/4\\
+-i\sqrt{3}/4 & 1/4
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+(b) Impure ensemble
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\rho_{1} & =\frac{3}{4}\left|g\right\rangle \left\langle g\right|=\frac{3}{4}\left(\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right)\\
+\rho_{2} & =\frac{1}{4}\left|e\right\rangle \left\langle e\right|=\frac{1}{4}\left(\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\rho_{\text{impure}}=\rho_{1}+\rho_{2}=\left(\begin{array}{cc}
+3/4 & 0\\
+0 & 1/4
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+(c) Experimental determination
+\end_layout
+
+\begin_layout Standard
+In the pure ensemble, all atoms are in a definite state 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+.
+ In the impure ensemble, a proportion of atoms are in each state.
+ Therefore, if we could devise an experiment to determine the likelihood
+ of an atom being in 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+, we would get different answers for the two ensembles.
+ For (a), we would get unity.
+ For (b), we would get an answer based on the projection of the component
+ states onto 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $A=\left|\psi\right\rangle \left\langle \psi\right|$
+\end_inset
+
+ be the observable that we can measure.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left\langle A\right\rangle _{(\text{pure})}=\text{Tr}\left[\rho_{\text{pure}}A\right]=\text{Tr}\left[\rho_{\text{pure}}^{2}\right]=1
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle A\right\rangle _{(\text{impure})}=\text{Tr}\left[\rho_{\text{impure}}A\right]=\text{Tr}\left[\left(\begin{array}{cc}
+(3/4)^{2} & i3^{3/2}/16\\
+-i\sqrt{3}/16 & 1/16
+\end{array}\right)\right]=10/16
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+(d) Entropy
+\end_layout
+
+\begin_layout Standard
+If we use a basis in which 
+\begin_inset Formula $\rho$
+\end_inset
+
+ is diagonal, the entropy is simply
+\begin_inset Formula 
+\begin{equation}
+S=-k_{B}\text{Tr}\left[\rho\ln\rho\right]=-k_{B}\sum_{k}\rho_{k}^{(\text{diag})}\ln\rho_{k}^{(\text{diag})}.
+\end{equation}
+
+\end_inset
+
+For the pure state, the eigenvalues of 1 and 0.
+ 
+\begin_inset Formula 
+\begin{equation}
+S_{\text{pure}}=-k_{B}\left[1\cdot\ln1+\lim_{x\rightarrow0^{+}}x\ln x\right].
+\end{equation}
+
+\end_inset
+
+We can evaluate the limit using L'hopital's rule.
+ Note that we have to write it as a fraction.
+ 
+\begin_inset Formula 
+\begin{equation}
+\lim_{x\rightarrow0^{+}}x\ln x=\lim_{x\rightarrow0^{+}}\frac{\ln x}{1/x}=\lim_{x\rightarrow0^{+}}-\frac{1/x}{1/x^{2}}=\lim_{x\rightarrow0^{+}}-x=0
+\end{equation}
+
+\end_inset
+
+So the entropy of a pure state is zero! 
+\begin_inset Formula 
+\begin{equation}
+S_{\text{pure}}=0
+\end{equation}
+
+\end_inset
+
+For the mixed state, 
+\begin_inset Formula 
+\begin{equation}
+S_{\text{impure}}=-k_{B}\left[3/4\cdot\ln3/4+1/4\cdot\ln1/4\right]\approx0.562k_{B}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

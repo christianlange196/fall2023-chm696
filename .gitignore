@@ -1,0 +1,6 @@
+
+*.lyx#
+*.lyx~
+*.dll
+*.npz
+*.pyc
