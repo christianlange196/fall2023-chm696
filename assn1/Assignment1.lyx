@@ -96,12 +96,215 @@ Christian
 Typical photon energies
 \end_layout
 
-\begin_layout Subsection*
-(a)
+\begin_layout Standard
+
+\emph on
+Jupyter notebook used for calculations included at the end of this document.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+(a) Photon energies
+\end_layout
+
+\begin_layout Itemize
+Photon energy in Joule: 
+\begin_inset Formula $2.33\times10^{-19}$
+\end_inset
+
+ J
+\end_layout
+
+\begin_layout Itemize
+Photon energy in eV: 
+\begin_inset Formula $1.46$
+\end_inset
+
+ eV
+\end_layout
+
+\begin_layout Itemize
+Frequency of light: 
+\begin_inset Formula $352$
+\end_inset
+
+ THz
+\end_layout
+
+\begin_layout Itemize
+Temperature: 
+\begin_inset Formula $1.69\times10^{4}$
+\end_inset
+
+ K
+\end_layout
+
+\begin_layout Subsubsection*
+(b) Total energy
+\end_layout
+
+\begin_layout Itemize
+Final velocity: 
+\begin_inset Formula $4.2$
+\end_inset
+
+ km/s
+\end_layout
+
+\begin_layout Subsubsection*
+(c) Recoil velocity
+\end_layout
+
+\begin_layout Itemize
+Recoil velocity: 
+\begin_inset Formula $29.5$
+\end_inset
+
+ mm/s
+\end_layout
+
+\begin_layout Itemize
+Recoil energy: 
+\begin_inset Formula $1.66\times10^{-29}$
+\end_inset
+
+ J
 \end_layout
 
 \begin_layout Section
 Mechanical velocity and electromagnetic fields in quantum mechanics
+\end_layout
+
+\begin_layout Subsubsection*
+(a) Commutators
+\end_layout
+
+\begin_layout Standard
+Functions of 
+\begin_inset Formula ${\bf r}$
+\end_inset
+
+ commute with 
+\begin_inset Formula ${\bf r}$
+\end_inset
+
+, and likewise with 
+\begin_inset Formula ${\bf p}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[{\bf r},{\bf A}({\bf r},t)\right] & =0\\
+\left[{\bf r},U({\bf r},t)\right] & =0
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+(b) Calculating the velocity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H=\frac{1}{2m}\sum_{i=x,y,z}\left[p_{i}^{2}+q^{2}A_{i}^{2}\left({\bf r},t\right)-qp_{i}A_{i}\left({\bf r},t\right)-qA_{i}\left({\bf r},t\right)p_{i}\right]+qU\left({\bf r},t\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left[x,H\right] & =\frac{1}{2m}\sum_{i=x,y,z}\left\{ \left[x,p_{i}^{2}\right]-q\left[x,p_{i}A_{i}\left({\bf r},t\right)\right]-q\left[x,A_{i}\left({\bf r},t\right)p_{i}\right]\right\} \\
+ & =\frac{1}{2m}\left\{ p_{x}\left[x,p_{x}\right]+\left[x,p_{x}\right]p_{x}-q\left[x,p_{x}\right]A_{x}\left({\bf r},t\right)-qA_{i}\left({\bf r},t\right)\left[x,p_{x}\right]\right\} \\
+ & =\frac{1}{2m}\left\{ 2i\hbar p_{x}-2qi\hbar A_{x}\left({\bf r},t\right)\right\} \\
+ & =\frac{i\hbar}{m}\left\{ p_{x}-qA_{x}\left({\bf r},t\right)\right\} 
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\left\langle x\right\rangle  & =\frac{1}{i\hbar}\left\langle \left[x,H\right]\right\rangle +\left\langle \frac{\partial}{\partial t}x\right\rangle \\
+ & =\frac{1}{m}\left\langle p_{x}-qA_{x}\left({\bf r},t\right)\right\rangle 
+\end{align}
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\left\langle y\right\rangle  & =\frac{1}{m}\left\langle p_{y}-qA_{y}\left({\bf r},t\right)\right\rangle \\
+\frac{d}{dt}\left\langle z\right\rangle  & =\frac{1}{m}\left\langle p_{z}-qA_{z}\left({\bf r},t\right)\right\rangle 
+\end{align}
+
+\end_inset
+
+so that 
+\begin_inset Formula 
+\begin{equation}
+\left\langle {\bf v}\right\rangle =\frac{1}{m}\left\langle {\bf p}-q{\bf A}\left({\bf r},t\right)\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+(c) The Force
+\end_layout
+
+\begin_layout Standard
+We can find the acceleration by a second application of Ehrenfest's theorem.
+ 
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =\frac{1}{i\hbar}\left\langle \left[{\bf v},H\right]\right\rangle +\left\langle \frac{\partial}{\partial t}{\bf v}\right\rangle \\
+ & =\frac{1}{i\hbar}\left\langle \left[{\bf v},qU\left({\bf r},t\right)\right]\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle \\
+ & =\frac{1}{i\hbar}\left\langle \left[\frac{{\bf p}}{m},qU\left({\bf r},t\right)\right]\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle 
+\end{align}
+
+\end_inset
+
+Using 
+\begin_inset Formula $\left[p,f(x)\right]=-i\hbar\partial_{x}f(x)$
+\end_inset
+
+, this is 
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =\frac{q}{m}\frac{1}{i\hbar}\left\langle -i\hbar\nabla U\left({\bf r},t\right)\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle \\
+ & =-\frac{q}{m}\left\langle \nabla U\left({\bf r},t\right)\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle 
+\end{align}
+
+\end_inset
+
+According to physics stackexchange, 
+\begin_inset Formula ${\bf E}=-\frac{\partial{\bf A}}{\partial t}$
+\end_inset
+
+.
+ This means that our force 
+\begin_inset Formula $m\frac{d}{dt}\left\langle {\bf v}\right\rangle $
+\end_inset
+
+ has a clear classical analogue.
+ 
+\begin_inset Formula 
+\begin{equation}
+m{\bf a}=-q\nabla U\left({\bf r},t\right)+q{\bf E}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -325,6 +528,35 @@ At
 1/2 & 0\\
 0 & 1/2
 \end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Appendices
+\end_layout
+
+\begin_layout Subsubsection*
+Commutator of momentum and a position-dependent function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left\langle x\right|\left[\hat{p},f(\hat{x})\right]\left|\psi\right\rangle  & =\left\langle x\right|\left(\hat{p}f(\hat{x})-f(\hat{x})\hat{p}\right)\left|\psi\right\rangle \\
+ & =-i\hbar\partial_{x}\left(f(x)\psi(x)\right)-i\hbar f(x)\partial_{x}\psi(x)\\
+ & =-i\hbar\left(\partial_{x}f(x)\right)\psi(x)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\rightarrow\left[p,f(x)\right]=-i\hbar\partial_{x}f(x)
 \end{equation}
 
 \end_inset
