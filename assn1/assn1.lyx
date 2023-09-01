@@ -230,6 +230,34 @@ Mechanical velocity and electromagnetic fields in quantum mechanics
 \end_layout
 
 \begin_layout Subsubsection*
+The vector potential
+\end_layout
+
+\begin_layout Standard
+It is useful to know the following definitions about the vector potential,
+ which I found on Wikipedia.
+ Here, 
+\begin_inset Formula ${\bf E}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf B}$
+\end_inset
+
+ are the electric and magnetic fields.
+ 
+\begin_inset Formula 
+\begin{align}
+{\bf B} & =\nabla\times{\bf A}\\
+{\bf E} & =-\nabla U\left({\bf r},t\right)-\frac{\partial{\bf A}}{\partial t}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
 (a) Commutators
 \end_layout
 
@@ -377,6 +405,11 @@ While it is true that any operator
 \end_inset
 
  which may not commute.
+ Therefore, we cannot assume that 
+\begin_inset Formula $\left\langle \left[{\bf v},\frac{1}{2}m{\bf v}\cdot{\bf v}\right]\right\rangle =0$
+\end_inset
+
+.
  
 \end_layout
 
@@ -390,6 +423,18 @@ H=\frac{1}{2}m{\bf v}\cdot{\bf v}+qU\left({\bf r},t\right)
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Subsubsection*
+Computing 
+\begin_inset Formula $\left[v_{i},v_{j}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 It is useful to compute the commutators of the different components of 
 \begin_inset Formula ${\bf v}$
 \end_inset
@@ -435,25 +480,112 @@ We can use the identity
 
 \end_inset
 
-This is simplified by the recognition that 
-\begin_inset Formula $\partial_{i}A_{j}\left({\bf r},t\right)-\partial_{j}A_{i}\left({\bf r},t\right)=\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{k}$
+We can simplify this by recognizing it is in the form of a cross product.
+ 
+\begin_inset Formula 
+\begin{align}
+\left(\nabla\times{\bf A}\right)_{x} & =\partial_{y}A_{z}-\partial_{z}A_{y}\\
+\left(\nabla\times{\bf A}\right)_{y} & =\partial_{z}A_{x}-\partial_{x}A_{z}\\
+\left(\nabla\times{\bf A}\right)_{z} & =\partial_{x}A_{y}-\partial_{y}A_{x}
+\end{align}
+
+\end_inset
+
+
+\emph on
+Note: This can be written very compactly with the Levi-Civita tensor 
+\begin_inset Formula $\epsilon_{ijk}$
 \end_inset
 
 .
- 
+ The rule is that 
+\begin_inset Formula $\epsilon_{ijk}=+1$
+\end_inset
+
+ if 
+\begin_inset Formula $ijk$
+\end_inset
+
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+in order,
+\begin_inset Quotes erd
+\end_inset
+
+ that is, 
+\begin_inset Formula $ijk=xyz$
+\end_inset
+
+, or 
+\begin_inset Formula $yzx$
+\end_inset
+
+, or 
+\begin_inset Formula $zxy$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $ijk$
+\end_inset
+
+ are 
+\begin_inset Quotes eld
+\end_inset
+
+out of order,
+\begin_inset Quotes erd
+\end_inset
+
+ that is, 
+\begin_inset Formula $ijk=xzy$
+\end_inset
+
+ or 
+\begin_inset Formula $yxz$
+\end_inset
+
+ or 
+\begin_inset Formula $zyx$
+\end_inset
+
+, then 
+\begin_inset Formula $\epsilon_{ijk}=-1$
+\end_inset
+
+.
+ If any indices are repeated, such as 
+\begin_inset Formula $ijk=xxy$
+\end_inset
+
+, then 
+\begin_inset Formula $\epsilon_{ijk}=0$
+\end_inset
+
+.
+ In this notation, any cross product can be written as 
 \begin_inset Formula 
 \begin{equation}
-\left[v_{i},v_{j}\right]=\frac{i\hbar q}{m^{2}}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{k}
+\left({\bf A}\times{\bf B}\right)_{i}=\sum_{jk}\epsilon_{ijk}A_{j}B_{k}.
 \end{equation}
 
 \end_inset
 
-Now we are ready to compute 
-\begin_inset Formula $\left[{\bf v},H\right]=\left[v_{x},\frac{1}{2}m{\bf v}\cdot{\bf v}+qU\left({\bf r},t\right)\right]$
+
+\end_layout
+
+\begin_layout Subsubsection*
+Computing 
+\begin_inset Formula $\left[{\bf v},{\bf v}\cdot{\bf v}\right]$
 \end_inset
 
-.
- Let's begin with one term 
+
+\end_layout
+
+\begin_layout Standard
+Let's begin with one component 
 \begin_inset Formula $\left[v_{x},{\bf v}\cdot{\bf v}\right]$
 \end_inset
 
@@ -461,14 +593,194 @@ Now we are ready to compute
  
 \begin_inset Formula 
 \begin{align}
-\left[v_{x},{\bf v}\cdot{\bf v}\right] & =\frac{m}{2}\left[v_{x},v_{x}^{2}+v_{y}^{2}+v_{z}^{2}\right]\\
- & =\frac{m}{2}\left\{ v_{y}\left[v_{x},v_{y}\right]+\left[v_{x},v_{y}\right]v_{y}+v_{z}\left[v_{x},v_{z}\right]+\left[v_{x},v_{z}\right]v_{z}\right\} \\
- & =\frac{m}{2}\frac{i\hbar q}{m^{2}}\left\{ v_{y}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}+\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}v_{y}+v_{z}\left[v_{x},v_{z}\right]+\left[v_{x},v_{z}\right]v_{z}\right\} 
+\left[v_{x},{\bf v}\cdot{\bf v}\right] & =\left[v_{x},v_{x}^{2}+v_{y}^{2}+v_{z}^{2}\right]\\
+ & =\left\{ v_{y}\left[v_{x},v_{y}\right]+\left[v_{x},v_{y}\right]v_{y}+v_{z}\left[v_{x},v_{z}\right]+\left[v_{x},v_{z}\right]v_{z}\right\} \\
+ & =\frac{i\hbar q}{m^{2}}\left\{ v_{y}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}+\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}v_{y}-v_{z}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{y}-\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{y}v_{z}\right\} \\
+ & =\frac{i\hbar q}{m^{2}}\left\{ \left({\bf v}\times\left(\nabla\times{\bf A}\left({\bf r},t\right)\right)\right)_{x}-\left(\left(\nabla\times{\bf A}\left({\bf r},t\right)\right)\times{\bf v}\right)_{x}\right\} \\
+ & =\frac{2i\hbar q}{m^{2}}\left\{ {\bf v}\times\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]\right\} _{x}
+\end{align}
+
+\end_inset
+
+Because there is nothing particularly special about 
+\begin_inset Formula $x$
+\end_inset
+
+ as opposed to 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+, this rule should hold for all 
+\begin_inset Formula $v_{x},v_{y},v_{z}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left[v_{i},{\bf v}\cdot{\bf v}\right]=\frac{2i\hbar q}{m^{2}}\left\{ {\bf v}\times\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]\right\} _{I}
+\end{equation}
+
+\end_inset
+
+The total commutator 
+\begin_inset Formula $\left[{\bf v},{\bf v}\cdot{\bf v}\right]$
+\end_inset
+
+ is simply 
+\begin_inset Formula 
+\begin{equation}
+\left[{\bf v},{\bf v}\cdot{\bf v}\right]=\frac{2i\hbar q}{m^{2}}\left\{ {\bf v}\times\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]\right\} 
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Computing 
+\begin_inset Formula $\left[{\bf v},U({\bf r},t\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall that functions of 
+\begin_inset Formula ${\bf r}$
+\end_inset
+
+ commute with other functions of 
+\begin_inset Formula ${\bf r}$
+\end_inset
+
+ because all of 
+\begin_inset Formula $r_{x},r_{y},r_{z}$
+\end_inset
+
+ commute with each other.
+ Recall also that 
+\begin_inset Formula $\left[p_{x},f(x)\right]=-i\hbar\partial_{x}f(x)$
+\end_inset
+
+ and that the gradient is defined as 
+\begin_inset Formula $\nabla f({\bf r})=\sum_{i}\hat{{\bf e}}_{i}\partial_{i}f({\bf r})$
+\end_inset
+
+.
+ Here, 
+\begin_inset Formula $\hat{{\bf e}}_{i}$
+\end_inset
+
+ is the unit vector in the 
+\begin_inset Formula $i$
+\end_inset
+
+th direction.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[{\bf v},U({\bf r},t)\right] & =\frac{1}{m}\left[{\bf p}-q{\bf A}\left({\bf r},t\right),U\left({\bf r},t\right)\right]\\
+ & =\frac{1}{m}\left[{\bf p},U\left({\bf r},t\right)\right]-\frac{q}{m}\left[{\bf A}\left({\bf r},t\right),U\left({\bf r},t\right)\right]\\
+ & =\frac{1}{m}\sum_{i}\hat{{\bf e}}_{i}\left[p_{i},U\left({\bf r},t\right)\right]\\
+ & =-\frac{i\hbar}{m}\sum_{i}\hat{{\bf e}}_{i}\partial_{i}U\left({\bf r},t\right)\\
+ & =-\frac{i\hbar}{m}\nabla U\left({\bf r},t\right)
 \end{align}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Computing 
+\begin_inset Formula $\left[{\bf v},H\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can finally assemble everything.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[{\bf v},H\right] & =\left[{\bf v},\frac{1}{2}m{\bf v}\cdot{\bf v}+qU\left({\bf r},t\right)\right]\\
+ & =q\left[{\bf v},U({\bf r},t\right]+\sum_{i}\hat{{\bf e}}_{i}\left[v_{i},\frac{1}{2}m{\bf v}\cdot{\bf v}\right]\\
+ & =-\frac{i\hbar q}{m}\nabla U\left({\bf r},t\right)+\frac{i\hbar q}{m}\left\{ {\bf v}\times\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]\right\} 
+\end{align}
+
+\end_inset
+
+The explicit time dependence of 
+\begin_inset Formula ${\bf v}$
+\end_inset
+
+ is all in 
+\begin_inset Formula ${\bf A}\left({\bf r},t\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\frac{\partial{\bf v}}{\partial t} & =\frac{\partial}{\partial t}\left[\frac{{\bf p}-q{\bf A}\left({\bf r},t\right)}{m}\right]\\
+ & =-\frac{q}{m}\frac{\partial{\bf A}\left({\bf r},t\right)}{\partial t}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =\frac{1}{i\hbar}\left\langle \left[{\bf v},H\right]\right\rangle +\left\langle \frac{\partial{\bf v}}{\partial t}\right\rangle \\
+ & =-\frac{q}{m}\left\langle \nabla U\left({\bf r},t\right)\right\rangle +\frac{q}{m}\left\langle {\bf v}\times\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]\right\rangle -\frac{q}{m}\left\langle \frac{\partial{\bf A}\left({\bf r},t\right)}{\partial t}\right\rangle 
+\end{align}
+
+\end_inset
+
+And that's the answer! In order to make sense of this, we need to employ
+ the relationship between the 
+\emph on
+classical 
+\emph default
+electric and magnetic fields 
+\begin_inset Formula ${\bf E}$
+\end_inset
+
+ and 
+\begin_inset Formula ${\bf B}$
+\end_inset
+
+ with the vector potential.
+ 
+\begin_inset Formula 
+\begin{align}
+{\bf B} & =\nabla\times{\bf A}\left({\bf r},t\right)\\
+{\bf E} & =-\nabla U\left({\bf r},t\right)-\frac{\partial{\bf A}\left({\bf r},t\right)}{\partial t}
+\end{align}
+
+\end_inset
+
+If we substitute these relations, we obtain
+\begin_inset Formula 
+\begin{align}
+\left\langle {\bf F}\right\rangle =m\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =q\left[\left\langle {\bf E}\right\rangle +\left\langle {\bf v}\times{\bf B}\right\rangle \right]
+\end{align}
+
+\end_inset
+
+which is exactly the form of the classical Lorentz force 
+\begin_inset Formula ${\bf F}=q\left({\bf E}+{\bf v}\times{\bf B}\right)$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
