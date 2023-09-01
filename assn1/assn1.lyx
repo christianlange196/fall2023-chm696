@@ -89,7 +89,7 @@ Quantum Optics Assignment 1
 \end_layout
 
 \begin_layout Author
-Christian
+Christian Lange
 \end_layout
 
 \begin_layout Section
@@ -105,6 +105,36 @@ Jupyter notebook used for calculations included at the end of this document.
 
 \begin_layout Subsubsection*
 (a) Photon energies
+\end_layout
+
+\begin_layout Standard
+For a photon with wavelength 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and frequency 
+\begin_inset Formula $f=c/\lambda$
+\end_inset
+
+, the energy 
+\begin_inset Formula $E$
+\end_inset
+
+ and momentum 
+\begin_inset Formula $p$
+\end_inset
+
+ are as follows.
+ 
+\begin_inset Formula 
+\begin{align}
+E & =\hbar\omega=hf\\
+p & =\frac{h}{\lambda}
+\end{align}
+
+\end_inset
+
+For a photon with wavelength 852 nm, these give
 \end_layout
 
 \begin_layout Itemize
@@ -131,9 +161,15 @@ Frequency of light:
  THz
 \end_layout
 
-\begin_layout Itemize
-Temperature: 
-\begin_inset Formula $1.69\times10^{4}$
+\begin_layout Standard
+The temperature difference of the atom after emission of the photon is obtained
+ through 
+\begin_inset Formula $E=k_{B}T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T=1.69\times10^{4}$
 \end_inset
 
  K
@@ -141,6 +177,15 @@ Temperature:
 
 \begin_layout Subsubsection*
 (b) Total energy
+\end_layout
+
+\begin_layout Standard
+We can get the velocity from 
+\begin_inset Formula $E=hf=\frac{1}{2}mv^{2}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -153,6 +198,15 @@ Final velocity:
 
 \begin_layout Subsubsection*
 (c) Recoil velocity
+\end_layout
+
+\begin_layout Standard
+The recoil velocity is obtained with 
+\begin_inset Formula $p=\frac{h}{f}=mv$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -262,45 +316,155 @@ so that
 \end_layout
 
 \begin_layout Standard
-We can find the acceleration by a second application of Ehrenfest's theorem.
- 
-\begin_inset Formula 
-\begin{align}
-\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =\frac{1}{i\hbar}\left\langle \left[{\bf v},H\right]\right\rangle +\left\langle \frac{\partial}{\partial t}{\bf v}\right\rangle \\
- & =\frac{1}{i\hbar}\left\langle \left[{\bf v},qU\left({\bf r},t\right)\right]\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle \\
- & =\frac{1}{i\hbar}\left\langle \left[\frac{{\bf p}}{m},qU\left({\bf r},t\right)\right]\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle 
-\end{align}
-
-\end_inset
-
-Using 
-\begin_inset Formula $\left[p,f(x)\right]=-i\hbar\partial_{x}f(x)$
-\end_inset
-
-, this is 
-\begin_inset Formula 
-\begin{align}
-\frac{d}{dt}\left\langle {\bf v}\right\rangle  & =\frac{q}{m}\frac{1}{i\hbar}\left\langle -i\hbar\nabla U\left({\bf r},t\right)\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle \\
- & =-\frac{q}{m}\left\langle \nabla U\left({\bf r},t\right)\right\rangle -\frac{q}{m}\left\langle \frac{\partial}{\partial t}{\bf A}\left({\bf r},t\right)\right\rangle 
-\end{align}
-
-\end_inset
-
-According to physics stackexchange, 
-\begin_inset Formula ${\bf E}=-\frac{\partial{\bf A}}{\partial t}$
-\end_inset
-
-.
- This means that our force 
-\begin_inset Formula $m\frac{d}{dt}\left\langle {\bf v}\right\rangle $
-\end_inset
-
- has a clear classical analogue.
+Based on the result from (b), we can define the velocity operator as follows.
  
 \begin_inset Formula 
 \begin{equation}
-m{\bf a}=-q\nabla U\left({\bf r},t\right)+q{\bf E}
+{\bf v}=\frac{1}{m}\left[{\bf p}-q{\bf A}\left({\bf r},t\right)\right]
 \end{equation}
+
+\end_inset
+
+We can find the acceleration by a second application of Ehrenfest's theorem.
+ 
+\begin_inset Formula 
+\begin{equation}
+\frac{d}{dt}\left\langle {\bf v}\right\rangle =\frac{1}{i\hbar}\left\langle \left[{\bf v},H\right]\right\rangle +\left\langle \frac{\partial}{\partial t}{\bf v}\right\rangle 
+\end{equation}
+
+\end_inset
+
+There are two things we must be careful of.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In general, the velocity operator has explicit time dependence through 
+\begin_inset Formula ${\bf A}\left({\bf r},t\right)$
+\end_inset
+
+, so that we cannot write 
+\begin_inset Formula $\left\langle \frac{\partial}{\partial t}{\bf v}\right\rangle ={\bf 0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+While it is true that any operator 
+\begin_inset Formula $\mathscr{O}$
+\end_inset
+
+ commutes with itself 
+\begin_inset Formula $\left[\mathscr{O},\mathscr{O}\right]=0$
+\end_inset
+
+, it is not necessarily the case that a vector of operators 
+\begin_inset Formula ${\bf O}$
+\end_inset
+
+ commutes with its square 
+\begin_inset Formula $\left[{\bf O},{\bf O}\cdot{\bf O}\right]\ne{\bf 0}$
+\end_inset
+
+.
+ When you expand into 
+\begin_inset Formula $\left[O_{x}\hat{{\bf x}}+O_{y}\hat{{\bf y}}+\cdots,O_{x}^{2}+O_{y}^{2}+\cdots\right]$
+\end_inset
+
+, you get terms like 
+\begin_inset Formula $\hat{{\bf x}}\left[O_{x},O_{y}^{2}\right]$
+\end_inset
+
+ which may not commute.
+ 
+\end_layout
+
+\begin_layout Standard
+We will start by rewriting the Hamiltonian in terms of the velocity operator.
+ 
+\begin_inset Formula 
+\begin{equation}
+H=\frac{1}{2}m{\bf v}\cdot{\bf v}+qU\left({\bf r},t\right)
+\end{equation}
+
+\end_inset
+
+It is useful to compute the commutators of the different components of 
+\begin_inset Formula ${\bf v}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[v_{i},v_{j}\right] & =\frac{1}{m^{2}}\left[p_{i}-qA_{i}\left({\bf r},t\right),p_{j}-qA_{j}\left({\bf r},t\right)\right]\\
+ & =\frac{1}{m^{2}}\left\{ \left[p_{i},p_{j}\right]+q^{2}\left[A_{i}\left({\bf r},t\right),A_{j}\left({\bf r},t\right)\right]-q\left[p_{i},A_{j}\left({\bf r},t\right)\right]-q\left[A_{i}\left({\bf r},t\right),p_{j}\right]\right\} \\
+ & =-\frac{q}{m^{2}}\left\{ \left[p_{i},A_{j}\left({\bf r},t\right)\right]+\left[A_{i}\left({\bf r},t\right),p_{j}\right]\right\} 
+\end{align}
+
+\end_inset
+
+We can use the identity 
+\begin_inset Formula $\left[p_{i},f(x)\right]=-i\hbar\partial_{x}f(x)$
+\end_inset
+
+ [see Appendix] to obtain 
+\begin_inset Formula $\left[p_{i},A_{j}\left({\bf r},t\right)\right]=-i\hbar\partial_{i}A_{j}\left({\bf r},t\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left[A_{i}\left({\bf r},t\right),p_{j}\right]=-\left[p_{j},A_{i}\left({\bf r},t\right)\right]=i\hbar\partial_{j}A_{i}\left({\bf r},t\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $i,j$
+\end_inset
+
+ are 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[v_{i},v_{j}\right] & =-\frac{q}{m^{2}}\left\{ -i\hbar\partial_{i}A_{j}\left({\bf r},t\right)+i\hbar\partial_{j}A_{i}\left({\bf r},t\right)\right\} \\
+ & =\frac{i\hbar q}{m^{2}}\left\{ \partial_{i}A_{j}\left({\bf r},t\right)-\partial_{j}A_{i}\left({\bf r},t\right)\right\} 
+\end{align}
+
+\end_inset
+
+This is simplified by the recognition that 
+\begin_inset Formula $\partial_{i}A_{j}\left({\bf r},t\right)-\partial_{j}A_{i}\left({\bf r},t\right)=\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{k}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left[v_{i},v_{j}\right]=\frac{i\hbar q}{m^{2}}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{k}
+\end{equation}
+
+\end_inset
+
+Now we are ready to compute 
+\begin_inset Formula $\left[{\bf v},H\right]=\left[v_{x},\frac{1}{2}m{\bf v}\cdot{\bf v}+qU\left({\bf r},t\right)\right]$
+\end_inset
+
+.
+ Let's begin with one term 
+\begin_inset Formula $\left[v_{x},{\bf v}\cdot{\bf v}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align}
+\left[v_{x},{\bf v}\cdot{\bf v}\right] & =\frac{m}{2}\left[v_{x},v_{x}^{2}+v_{y}^{2}+v_{z}^{2}\right]\\
+ & =\frac{m}{2}\left\{ v_{y}\left[v_{x},v_{y}\right]+\left[v_{x},v_{y}\right]v_{y}+v_{z}\left[v_{x},v_{z}\right]+\left[v_{x},v_{z}\right]v_{z}\right\} \\
+ & =\frac{m}{2}\frac{i\hbar q}{m^{2}}\left\{ v_{y}\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}+\left[\nabla\times{\bf A}\left({\bf r},t\right)\right]_{z}v_{y}+v_{z}\left[v_{x},v_{z}\right]+\left[v_{x},v_{z}\right]v_{z}\right\} 
+\end{align}
 
 \end_inset
 
