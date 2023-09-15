@@ -1,0 +1,438 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Optics Assignment 2
+\end_layout
+
+\begin_layout Author
+Christian Lange
+\end_layout
+
+\begin_layout Section
+Field operators
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{E}\left(\chi\right)=E_{0}\left(\hat{a}e^{-i\chi}+\hat{a}^{\dagger}e^{i\chi}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(a) Expectation values 
+\end_layout
+
+\begin_layout Standard
+Expectation values for Fock states.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle n\right|E\left|n\right\rangle =0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle n\right|E\left|n\right\rangle ^{2}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle n\right|E^{2}\left|n\right\rangle  & =E_{0}^{2}\left\langle n\right|\left(aae^{-2i\chi}+a^{\dagger}a^{\dagger}e^{2i\chi}+aa^{\dagger}+a^{\dagger}a\right)\left|n\right\rangle \\
+ & =E_{0}^{2}\left\langle n\right|aa^{\dagger}+a^{\dagger}a\left|n\right\rangle \\
+ & =E_{0}^{2}\left(2n+1\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left(\Delta E\right)^{2} & =\left\langle E^{2}\right\rangle -\left\langle E\right\rangle ^{2}\\
+ & =E_{0}\left(2n+1\right)
+\end{align}
+
+\end_inset
+
+Expectation values for coherent states.
+ Note that 
+\begin_inset Formula $\left\langle \alpha\right|a^{\dagger}=\alpha^{*}\left\langle \alpha\right|$
+\end_inset
+
+.
+ Note also that, since 
+\begin_inset Formula $\left[a,a^{\dagger}\right]=1\rightarrow$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \alpha\right|aa^{\dagger}\left|\alpha\right\rangle =\left\langle \alpha\right|1+a^{\dagger}a\left|\alpha\right\rangle =1+\left|\alpha\right|^{2}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|E\left|\alpha\right\rangle  & =E_{0}\left(\left\langle \alpha\right|\hat{a}\left|\alpha\right\rangle e^{-i\chi}+\left\langle \alpha\right|\hat{a}^{\dagger}\left|\alpha\right\rangle e^{i\chi}\right)\\
+ & =E_{0}\left(\alpha e^{-i\chi}+\alpha^{*}e^{i\chi}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle \alpha\right|E\left|\alpha\right\rangle ^{2}=E_{0}^{2}\left(\alpha^{2}e^{-2i\chi}+\left(\alpha^{*}\right)^{2}e^{2i\chi}+2\left|\alpha\right|^{2}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|E^{2}\left|\alpha\right\rangle  & =E_{0}^{2}\left\langle \alpha\right|\left(aae^{-2i\chi}+a^{\dagger}a^{\dagger}e^{2i\chi}+aa^{\dagger}+a^{\dagger}a\right)\left|\alpha\right\rangle \\
+ & =E_{0}^{2}\left(\alpha^{2}e^{-2i\chi}+\left(\alpha^{*}\right)^{2}e^{2i\chi}+1+2\left|\alpha\right|^{2}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left(\Delta E\right)^{2} & =\left\langle E^{2}\right\rangle -\left\langle E\right\rangle ^{2}\\
+ & =E_{0}^{2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) Scaling of 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In general, 
+\begin_inset Formula $E_{0}\propto\sqrt{\frac{\omega}{V}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+(c) Energy uncertainty.
+ 
+\end_layout
+
+\begin_layout Standard
+We can write 
+\begin_inset Formula $\left(a^{\dagger}a\right)^{2}=a^{\dagger}aa^{\dagger}a=a^{\dagger}\left(1+a^{\dagger}a\right)a=a^{\dagger}a+a^{\dagger}a^{\dagger}aa$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle n\right|H\left|n\right\rangle =\hbar\omega\left(n+\frac{1}{2}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle n\right|H^{2}\left|n\right\rangle  & =\left(\hbar\omega\right)^{2}\left\langle n\right|a^{\dagger}aa^{\dagger}a+a^{\dagger}a+\frac{1}{4}\left|n\right\rangle \\
+ & =\left[\hbar\omega\left(n+\frac{1}{2}\right)\right]^{2}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left[\frac{\Delta H}{\left\langle H\right\rangle }\right]_{\mathrm{Fock}}=0
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle \alpha\right|H\left|\alpha\right\rangle =\hbar\omega\left(\left|\alpha\right|^{2}+\frac{1}{2}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|H^{2}\left|\alpha\right\rangle  & =\left(\hbar\omega\right)^{2}\left\langle \alpha\right|a^{\dagger}aa^{\dagger}a+a^{\dagger}a+\frac{1}{4}\left|\alpha\right\rangle \\
+ & =\left(\hbar\omega\right)^{2}\left(\left|\alpha\right|^{4}+2\left|\alpha\right|^{2}+\frac{1}{4}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left[\frac{\Delta H}{\left\langle H\right\rangle }\right]_{\mathrm{coherent}}=\sqrt{\frac{\left|\alpha\right|^{2}}{\left|\alpha\right|^{2}+\frac{1}{2}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quadrature components and fields
+\end_layout
+
+\begin_layout Description
+(a) Classical oscillation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+A\cos\left(\omega t+\varphi\right) & =A\mathrm{Re}\left[e^{i\left(\omega t+\varphi\right)}\right]\\
+ & =A\mathrm{Re}\left[e^{i\varphi}\cos\omega t+e^{i\varphi}i\sin\omega t\right]\\
+ & =A\left[\cos\varphi\cos\omega t-\sin\varphi\sin\omega t\right]
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) Position and momentum.
+ 
+\begin_inset Formula 
+\begin{align}
+x & =\sqrt{\frac{\hbar}{2\omega}}\left(a+a^{\dagger}\right)\\
+p & =-i\sqrt{\frac{\hbar\omega}{2}}\left(a-a^{\dagger}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle \alpha\right|x\left|\alpha\right\rangle =\sqrt{\frac{\hbar}{2\omega}}\left(\alpha+\alpha^{*}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|x^{2}\left|\alpha\right\rangle  & =\frac{\hbar}{2\omega}\left\langle \alpha\right|aa+a^{\dagger}a^{\dagger}+aa^{\dagger}+a^{\dagger}a\left|\alpha\right\rangle \\
+ & =\frac{\hbar}{2\omega}\left\langle \alpha\right|aa+a^{\dagger}a^{\dagger}+1+2a^{\dagger}a\left|\alpha\right\rangle \\
+ & =\frac{\hbar}{2\omega}\left(1+\alpha^{2}+\left(\alpha^{*}\right)^{2}+2\left|\alpha\right|^{2}\right)\\
+ & =\frac{\hbar}{2\omega}\left[1+\left(\alpha+\alpha^{*}\right)^{2}\right]
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left(\Delta x\right)_{\mathrm{coherent}}=\sqrt{\frac{\hbar}{2\omega}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left\langle \alpha\right|p\left|\alpha\right\rangle =-i\sqrt{\frac{\hbar\omega}{2}}\left(\alpha+\alpha^{*}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|p^{2}\left|\alpha\right\rangle  & =-\frac{\hbar\omega}{2}\left\langle \alpha\right|aa+a^{\dagger}a^{\dagger}-\left(aa^{\dagger}+a^{\dagger}a\right)\left|\alpha\right\rangle \\
+ & =-\frac{\hbar\omega}{2}\left(\alpha^{2}+\left(\alpha^{*}\right)^{2}-2\left|\alpha\right|^{2}-1\right)\\
+ & =\frac{\hbar\omega}{2}\left[1-\left(\alpha+\alpha^{*}\right)^{2}\right]
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(c) Uncertainty
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula 
+\begin{equation}
+\left(\Delta p\right)_{\mathrm{coherent}}=\sqrt{\frac{\hbar\omega}{2}}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Delta x\Delta p=\frac{\hbar}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(d) Classical correspondance.
+ 
+\end_layout
+
+\begin_layout Standard
+No.
+ The Fock state has no classical analogue.
+ This is because its second-order autocorrelation function is strictly nonclassi
+cal.
+ 
+\end_layout
+
+\begin_layout Section*
+Definitions
+\end_layout
+
+\begin_layout Standard
+The coherent state is defined in the number bases.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left|\alpha\right\rangle =\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}e^{-\left|\alpha\right|^{2}/2}\left|n\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+a\left|\alpha\right\rangle  & =\alpha\left|\alpha\right\rangle \\
+a^{\dagger}\left|\alpha\right\rangle  & =\left(\partial_{\alpha}+\alpha^{*}\right)\left|\alpha\right\rangle 
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left[a\left|\alpha\right\rangle \right]^{\dagger}=\alpha^{*}\left\langle \alpha\right|
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
