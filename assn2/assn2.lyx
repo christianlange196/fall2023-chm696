@@ -400,6 +400,236 @@ cal.
  
 \end_layout
 
+\begin_layout Section
+Fock states and coherent states in the EM Hamiltonian
+\end_layout
+
+\begin_layout Description
+(a) Show that the set of Fock states for one mode forms an orthonormal set.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|n\right\rangle =\frac{\left(a^{\dagger}\right)^{n}}{\sqrt{n!}}\left|0\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \left.n\right|n^{\prime}\right\rangle  & =\frac{1}{\sqrt{n!n^{\prime}!}}\left\langle 0\right|a^{n}\left(a^{\dagger}\right)^{n^{\prime}}\left|0\right\rangle 
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(b) How do these orthonormality conditions transfer to the many-mode case?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle \left.n_{{\bf k}}\right|n_{{\bf k}^{\prime}}^{\prime}\right\rangle =\delta_{nn^{\prime}}\delta\left({\bf k}-{\bf k}^{\prime}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(c) We again consider states of the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\alpha\right\rangle =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}\left|n\right\rangle 
+\end{equation}
+
+\end_inset
+
+which are eigenstates of the annihilation operator 
+\begin_inset Formula $a$
+\end_inset
+
+ as discussed earlier.
+ Can an analogue eigenstate of the creation operator 
+\begin_inset Formula $a^{\dagger}$
+\end_inset
+
+ exist.
+ 
+\end_layout
+
+\begin_layout Description
+Answer We can try to derive such a state in the same way.
+ Consider a state 
+\begin_inset Formula $\left|\beta\right\rangle $
+\end_inset
+
+ that satisfies 
+\begin_inset Formula $a^{\dagger}\left|\beta\right\rangle =\beta\left|\beta\right\rangle $
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left|\beta\right\rangle =\sum_{n}c_{n}\left|n\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+a^{\dagger}\left|\beta\right\rangle =\sum_{n}c_{n}\sqrt{n+1}\left|n+1\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\sum_{n=0}c_{n}\sqrt{n+1}\left|n+1\right\rangle  & =\sum_{n=0}\beta\left|n\right\rangle \\
+ & =\beta\left|0\right\rangle +\sum_{n=0}\beta\left|n+1\right\rangle 
+\end{align}
+
+\end_inset
+
+This yields 
+\begin_inset Formula 
+\begin{equation}
+-\beta\left|0\right\rangle +\sum_{n=0}c_{n}\sqrt{n+1}\left|n+1\right\rangle -\beta\left|n+1\right\rangle =0
+\end{equation}
+
+\end_inset
+
+But this is only true is 
+\begin_inset Formula $\beta=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+(d) What is the expectation value of the photon number operator 
+\begin_inset Formula $\left\langle n\right\rangle $
+\end_inset
+
+ for the above coherent state?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\alpha\right\rangle =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}\left|n\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+n\left|\alpha\right\rangle  & =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}n\left|n\right\rangle 
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+\left\langle \alpha\right|n\left|\alpha\right\rangle  & =\exp\left(-\left|\alpha\right|^{2}\right)\left(\sum_{m=0}^{\infty}\frac{\left(\alpha^{*}\right)^{m}}{\sqrt{m!}}\left\langle m\right|\right)\left(\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}n\left|n\right\rangle \right)\\
+ & =\exp\left(-\left|\alpha\right|^{2}\right)\sum_{nm}\frac{\alpha^{n}\left(\alpha^{*}\right)^{m}}{\sqrt{n!m!}}n\delta_{nm}\\
+ & =\left|\alpha\right|^{2}\exp\left(-\left|\alpha\right|^{2}\right)\sum_{n}\frac{\left(\left|\alpha\right|^{2}\right)^{n-1}}{\left(n-1\right)!}\\
+ & =\left|\alpha\right|^{2}\exp\left(-\left|\alpha\right|^{2}\right)\exp\left(\left|\alpha\right|^{2}\right)\\
+ & =\left|\alpha\right|^{2}
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+(e) Show that the coherent state 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ can also be expressed as 
+\begin_inset Formula 
+\begin{equation}
+\left|\alpha\right\rangle =\exp\left(\alpha a^{\dagger}-\frac{1}{2}\left|\alpha\right|^{2}\right)\left|0\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We begin in the obvious way.
+ 
+\begin_inset Formula 
+\begin{equation}
+\left|n\right\rangle =\frac{\left(a^{\dagger}\right)^{n}}{\sqrt{n!}}\left|0\right\rangle 
+\end{equation}
+
+\end_inset
+
+For example
+\begin_inset Formula 
+\begin{align}
+\left|1\right\rangle  & =\frac{a^{\dagger}}{\sqrt{1}}\left|0\right\rangle =\sqrt{0+1}\left|1\right\rangle =\left|1\right\rangle \\
+\left|2\right\rangle  & =\frac{a^{\dagger}}{\sqrt{2}}\left|1\right\rangle =\frac{\sqrt{1+1}}{\sqrt{2}}\left|2\right\rangle =\left|2\right\rangle 
+\end{align}
+
+\end_inset
+
+It then obviously follows that 
+\begin_inset Formula 
+\begin{align}
+\left|\alpha\right\rangle  & =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\sum_{n}\frac{\alpha^{n}}{\sqrt{n!}}\left|n\right\rangle \\
+ & =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\sum_{n}\frac{\left(\alpha a^{\dagger}\right)^{n}}{n!}\left|0\right\rangle \\
+ & =\exp\left(-\frac{1}{2}\left|\alpha\right|^{2}\right)\exp\left(\alpha a^{\dagger}\right)\left|0\right\rangle \\
+ & =\exp\left(\alpha a^{\dagger}-\frac{1}{2}\left|\alpha\right|^{2}\right)\left|0\right\rangle 
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\blacksquare
+\]
+
+\end_inset
+
+This is obviously known as the 
+\emph on
+displacement operator
+\emph default
+.
+ Obviously, it translates the vacuum state of the harmonic oscillator.
+ 
+\end_layout
+
 \begin_layout Section*
 Definitions
 \end_layout
@@ -409,7 +639,7 @@ The coherent state is defined in the number bases.
  
 \begin_inset Formula 
 \begin{equation}
-\left|\alpha\right\rangle =\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}e^{-\left|\alpha\right|^{2}/2}\left|n\right\rangle 
+\left|\alpha\right\rangle =\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}e^{-\left|\alpha j\right|^{2}/2}\left|n\right\rangle 
 \end{equation}
 
 \end_inset
@@ -428,6 +658,56 @@ a^{\dagger}\left|\alpha\right\rangle  & =\left(\partial_{\alpha}+\alpha^{*}\righ
 \begin{equation}
 \left[a\left|\alpha\right\rangle \right]^{\dagger}=\alpha^{*}\left\langle \alpha\right|
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Commutation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+a\left(a^{\dagger}\right)^{n} & =\left(a^{\dagger}a+1\right)\left(a^{\dagger}\right)^{n-1}\\
+ & =a^{\dagger}\left[a\left(a^{\dagger}\right)^{n-1}\right]+\left(a^{\dagger}\right)^{n-1}\\
+ & =a^{\dagger}\left[a^{\dagger}\left[a\left(a^{\dagger}\right)^{n-2}\right]+\left(a^{\dagger}\right)^{n-2}\right]+\left(a^{\dagger}\right)^{n-1}\\
+ & =\left(a^{\dagger}\right)^{2}a\left(a^{\dagger}\right)^{n-2}+2\left(a^{\dagger}\right)^{n-1}\\
+ & =\left(a^{\dagger}\right)^{2}\left[a^{\dagger}\left[a\left(a^{\dagger}\right)^{n-3}\right]+\left(a^{\dagger}\right)^{n-3}\right]+2\left(a^{\dagger}\right)^{n-1}\\
+ & =\left(a^{\dagger}\right)^{3}a\left(a^{\dagger}\right)^{n-3}+3\left(a^{\dagger}\right)^{n-1}
+\end{align}
+
+\end_inset
+
+In general, 
+\begin_inset Formula 
+\begin{equation}
+a\left(a^{\dagger}\right)^{n}=\left(a^{\dagger}\right)^{m}a\left(a^{\dagger}\right)^{n-m}+m\left(a^{\dagger}\right)^{n-1}
+\end{equation}
+
+\end_inset
+
+If we choose 
+\begin_inset Formula $m=n$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+a\left(a^{\dagger}\right)^{n}=\left(a^{\dagger}\right)^{n}a+n\left(a^{\dagger}\right)^{n-1}
+\end{equation}
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula 
+\begin{align}
+a^{2}\left(a^{\dagger}\right)^{n} & =a\left(a^{\dagger}\right)^{n}a+na\left(a^{\dagger}\right)^{n-1}\\
+ & =\left(a^{\dagger}\right)^{n}a^{2}+n\left(a^{\dagger}\right)^{n-1}a+n\left[\left(a^{\dagger}\right)^{n}a+\left(n-1\right)\left(a^{\dagger}\right)^{n-2}\right]\\
+ & =\left(a^{\dagger}\right)^{n}a^{2}+2n\left(a^{\dagger}\right)^{n-1}a+n\left(n-1\right)\left(a^{\dagger}\right)^{n-2}
+\end{align}
 
 \end_inset
 
