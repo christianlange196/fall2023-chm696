@@ -197,8 +197,30 @@ What state is this? Why is
 Wigner functions
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W(q,p)=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\left\langle q+\frac{x}{2}\right|\rho\left|q-\frac{x}{2}\right\rangle e^{ipx/\hbar}dx
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Numerical exploration of two-level systems in the RWA
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H_{\text{RWA}}=-\frac{\hbar\delta}{2}\sigma_{z}-\frac{\hbar\Omega_{0}}{2}\sigma_{x}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
