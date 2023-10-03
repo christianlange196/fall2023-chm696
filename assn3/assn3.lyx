@@ -1,0 +1,205 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Q-function (Husimi) representation
+\end_layout
+
+\begin_layout Standard
+The Q-function representation is a very useful way to represent and visualize
+ quantum states and to calculate many expectation operators.
+ For a given quantum state, defined via its density matrix ˆρ, it is defined
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Q(\alpha)=\frac{1}{\pi}\left\langle \alpha\left|\rho\right|\alpha\right\rangle 
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is a complex number and 
+\begin_inset Formula $\left|\alpha\right\rangle $
+\end_inset
+
+ denotes the corresponding coherent state.
+ 
+\end_layout
+
+\begin_layout Subsection*
+(a) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho=\left|\psi\right\rangle \left\langle \psi\right|
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+Q(\alpha) & =\frac{1}{\pi}\left\langle \alpha\left|\rho\right|\alpha\right\rangle \\
+ & =\frac{1}{\pi}\left\langle \left.\alpha\right|\psi\right\rangle \left\langle \left.\psi\right|\alpha\right\rangle \\
+ & =\frac{1}{\pi}\left|\left\langle \left.\alpha\right|\psi\right\rangle \right|^{2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+(b)
+\end_layout
+
+\begin_layout Standard
+The coherent state is 
+\begin_inset Formula 
+\begin{equation}
+\left|\alpha\right\rangle =\exp\left(-\frac{\left|\alpha\right|^{2}}{2}\right)\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}\left|n\right\rangle 
+\end{equation}
+
+\end_inset
+
+The Q-function for a Fock state is 
+\begin_inset Formula 
+\begin{equation}
+Q_{n}(\alpha)=\frac{1}{\pi}\left|\left\langle \left.\alpha\right|n\right\rangle \right|^{2}=\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}}{2}\right)\frac{\left|\alpha\right|^{2n}}{\sqrt{n!}}
+\end{equation}
+
+\end_inset
+
+The Q-function for a coherent state 
+\begin_inset Formula $\left|\beta\right\rangle $
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align}
+Q_{\beta}\left(\alpha\right) & =\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}+\left|\beta\right|^{2}}{2}\right)\sum_{n,m}\frac{\alpha^{n}\beta^{m}}{\sqrt{n!m!}}\delta_{nm}\\
+ & =\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}+\left|\beta\right|^{2}}{2}\right)\left(\alpha\beta\right)^{n}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+(c)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left|\psi\right\rangle =N\frac{1}{\sqrt{2}}\left(\left|\alpha^{\prime}\right\rangle +\left|-\alpha^{\prime}\right\rangle \right)
+\end{equation}
+
+\end_inset
+
+What state is this? Why is 
+\begin_inset Formula $N$
+\end_inset
+
+ not generally unity?
+\end_layout
+
+\begin_layout Section
+Wigner functions
+\end_layout
+
+\begin_layout Section
+Numerical exploration of two-level systems in the RWA
+\end_layout
+
+\end_body
+\end_document
