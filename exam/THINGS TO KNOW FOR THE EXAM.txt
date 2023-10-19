@@ -1,0 +1,5 @@
+THINGS TO KNOW FOR THE EXAM
+
+1. What is the amplitude of the quantized electric field
+
+2. What is the ratio of spontaneous/stimulated emission for blackbody light of temperature T?
