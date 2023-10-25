@@ -5,3 +5,5 @@ THINGS TO KNOW FOR THE EXAM
 2. What is the ratio of spontaneous/stimulated emission for blackbody light of temperature T?
 
 3. What is the coherent state in terms of the Fock states? What are std. dev., variance, etc?
+
+4. What is the single-photon coupling strength g?
