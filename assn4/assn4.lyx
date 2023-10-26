@@ -88,12 +88,199 @@
 Assignment 4
 \end_layout
 
-\begin_layout Section
-Bloch-vetor and spontaneous emission
+\begin_layout Section*
+Problem 1
 \end_layout
 
-\begin_layout Subsection
-Undriven, damped decay
+\begin_layout Subsection*
+Problem 1c
+\end_layout
+
+\begin_layout Standard
+In the 
+\begin_inset Formula $R_{1},R_{2,}R_{3}$
+\end_inset
+
+ representation, 
+\begin_inset Formula 
+\begin{equation}
+\rho=\frac{1}{2}\left(\begin{array}{cc}
+1+R_{3} & R_{1}-iR_{2}\\
+R_{1}+R_{2} & 1-R_{3}
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+So we have the initial condition
+\begin_inset Formula 
+\begin{equation}
+\rho(0)=\left(\begin{array}{cc}
+1/2 & 1/2\\
+1/2 & 1/2
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Problem 2
+\end_layout
+
+\begin_layout Section*
+Problem 3
+\end_layout
+
+\begin_layout Subsection*
+Unitary transformation
+\end_layout
+
+\begin_layout Subsubsection*
+Hamiltonians
+\end_layout
+
+\begin_layout Standard
+The Hamiltonians are
+\begin_inset Formula 
+\begin{equation}
+H=H_{0}+H_{L}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{0}=\hbar\omega_{0}\sigma^{\dagger}\sigma
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{L}=-\frac{\hbar\Omega_{R}}{2}\left(e^{i\Delta t}\sigma+e^{-i\Delta t}\sigma^{\dagger}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Unitary operator
+\end_layout
+
+\begin_layout Standard
+The unitary operator is
+\begin_inset Formula 
+\begin{equation}
+U=e^{i\delta t\sigma^{\dagger}\sigma}=\sum_{n}\frac{\left(i\delta t\right)^{n}}{n!}\sigma^{\dagger}\sigma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Transformation
+\end_layout
+
+\begin_layout Standard
+The transformations are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tilde{H}=UHU^{\dagger}+i\hbar\frac{\partial U}{\partial t}U^{\dagger}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+i\hbar\frac{\partial U}{\partial t}U^{\dagger}=i\hbar\left(i\delta\sigma^{\dagger}\sigma\right)=-\hbar\delta\sigma^{\dagger}\sigma
+\end{equation}
+
+\end_inset
+
+The transformed unperturbed Hamiltonian is
+\begin_inset Formula 
+\begin{equation}
+UH_{0}U^{\dagger}=\hbar\left(\omega_{0}-\delta\right)\sigma^{\dagger}\sigma
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{UH_{L}U^{\dagger}}{-\hbar\Omega_{R}/2}=e^{i\Delta t}U\sigma U^{\dagger}+\text{H.c.}
+\end{equation}
+
+\end_inset
+
+We have
+\begin_inset Formula 
+\begin{equation}
+U\sigma U^{\dagger}=U\sigma\left(\sum_{n}\frac{\left(-i\delta t\right)^{n}}{n!}\sigma^{\dagger}\sigma\right)
+\end{equation}
+
+\end_inset
+
+We can use
+\begin_inset Formula 
+\begin{equation}
+\left(\sigma\sigma^{\dagger}\right)\sigma=\left(1+\sigma^{\dagger}\sigma\right)\sigma
+\end{equation}
+
+\end_inset
+
+to obtain
+\begin_inset Formula 
+\begin{align}
+U\sigma U^{\dagger} & =U\left(\sum_{n}\frac{\left(-i\delta t\right)^{n}}{n!}\left(1+\sigma^{\dagger}\sigma\right)\right)\sigma\\
+ & =U\left(U^{\dagger}e^{-i\delta t}\right)\sigma\\
+ & =e^{-i\delta t}\sigma
+\end{align}
+
+\end_inset
+
+The transformed driving Hamiltonian is 
+\begin_inset Formula 
+\begin{equation}
+\frac{UH_{L}U^{\dagger}}{-\hbar\Omega_{R}/2}=e^{-i\left(\Delta-\delta\right)t}\sigma+\text{H.c.}
+\end{equation}
+
+\end_inset
+
+so that the total transformed Hamiltonian is 
+\begin_inset Formula 
+\begin{equation}
+\tilde{H}=-\hbar\delta\sigma^{\dagger}\sigma-\frac{\hbar\Omega_{R}}{2}\left(e^{-i\left(\Delta-\delta\right)t}\sigma+\text{H.c.}\right)
+\end{equation}
+
+\end_inset
+
+If we choose 
+\begin_inset Formula $\delta=\Delta$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\tilde{H}=-\hbar\Delta\sigma^{\dagger}\sigma-\frac{\hbar\Omega_{R}}{2}\left(\sigma+\sigma^{\dagger}\right)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
