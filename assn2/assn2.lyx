@@ -146,7 +146,7 @@ Expectation values for Fock states.
 \begin_inset Formula 
 \begin{align}
 \left(\Delta E\right)^{2} & =\left\langle E^{2}\right\rangle -\left\langle E\right\rangle ^{2}\\
- & =E_{0}\left(2n+1\right)
+ & =E_{0}^{2}\left(2n+1\right)
 \end{align}
 
 \end_inset

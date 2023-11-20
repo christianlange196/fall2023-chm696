@@ -1,0 +1,850 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1in
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Quantum light
+\end_layout
+
+\begin_layout Description
+Single-photon
+\begin_inset space ~
+\end_inset
+
+Rabi
+\begin_inset space ~
+\end_inset
+
+freq 
+\begin_inset Formula $g=\mu\sqrt{\frac{\omega}{2\hbar\epsilon_{0}V}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Quantized
+\begin_inset space ~
+\end_inset
+
+field
+\begin_inset space ~
+\end_inset
+
+amplitude 
+\begin_inset Formula $E_{0}=\sqrt{\frac{\hbar\omega}{2\epsilon_{0}V}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Spontaneous
+\begin_inset space ~
+\end_inset
+
+emission The ratio of spontaneous emission 
+\begin_inset Formula $(A)$
+\end_inset
+
+ and stimulated emission 
+\begin_inset Formula $(B)$
+\end_inset
+
+ is 
+\begin_inset Formula $\frac{A}{B}\approx e^{\frac{\hbar\omega}{k_{B}T}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Variances For a field operator 
+\begin_inset Formula $E(\chi)=E_{0}\left(ae^{-i\chi}+\text{H.c.}\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle E\right\rangle _{n}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle E^{2}\right\rangle _{n}=\left(\Delta E\right)_{n}^{2}=2E_{0}^{2}\left(n+1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle E\right\rangle _{\alpha}=E_{0}^{2}\left(\alpha^{2}e^{-2i\chi}+\alpha^{*2}e^{2i\chi}+2\left|\alpha\right|^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\langle E^{2}\right\rangle _{\alpha}=E_{0}^{2}\left(\alpha^{2}e^{-2i\chi}+1+2\left|\alpha\right|^{2}+\alpha^{*2}e^{2i\chi}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\Delta E\right)_{\alpha}^{2}=E_{0}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Pure
+\begin_inset space ~
+\end_inset
+
+entropy 
+\begin_inset Formula $S=-k_{B}\text{Tr}\left[\rho\ln\rho\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Mixed
+\begin_inset space ~
+\end_inset
+
+entropy 
+\begin_inset Formula $S=-k_{B}\text{Tr}\left[\lambda_{k}\ln\lambda_{k}\right]>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Variance
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(\left|n\right\rangle \right)$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle \left(\Delta n\right)^{2}\right\rangle =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Variance
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(\left|\alpha\right\rangle \right)$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle \left(\Delta\alpha\right)^{2}\right\rangle =\overline{n}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Autocorrelation
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(\left|n\right\rangle \right)$
+\end_inset
+
+ 
+\begin_inset Formula $g^{(2)}(\tau)=1-\frac{1}{\overline{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Autocorrelation
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(\left|\alpha\right\rangle \right)$
+\end_inset
+
+ 
+\begin_inset Formula $g^{2}(\tau)=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Autocorrelation
+\begin_inset space ~
+\end_inset
+
+(single
+\begin_inset space ~
+\end_inset
+
+mode) 
+\begin_inset Formula 
+\[
+g^{(2)}(\tau)=\frac{\left\langle \left(\Delta n\right)^{2}\right\rangle +\left\langle n\right\rangle ^{2}-\left\langle n\right\rangle }{\left\langle n\right\rangle ^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Coherent
+\begin_inset space ~
+\end_inset
+
+state 
+\begin_inset Formula $a\left|\alpha\right\rangle =\alpha\left|\alpha\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left|\alpha\right\rangle =e^{-\frac{\left|\alpha\right|^{2}}{2}}\sum_{n=0}^{\infty}\frac{\alpha^{n}}{\sqrt{n!}}\left|n\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha=e^{-\frac{\left|\alpha\right|^{2}}{2}}e^{\alpha a^{\dagger}}e^{-\alpha^{*}a}\left|0\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Completeness 
+\begin_inset Formula $\mathbb{I}=\frac{1}{\pi}\int d^{2}\alpha\left|\alpha\right\rangle \left\langle \alpha\right|$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Overcompleteness 
+\begin_inset Formula $\left\langle \left.\alpha\right|\beta\right\rangle \ne\delta^{(2)}\left(\alpha-\beta\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+P-representation 
+\begin_inset Formula $P_{\gamma}\left(\alpha\right)=\delta^{(2)}\left(\alpha-\gamma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Squeezed
+\begin_inset space ~
+\end_inset
+
+state State 
+\begin_inset Formula $\left|\psi\right\rangle $
+\end_inset
+
+ is squeezed when 
+\begin_inset Formula $\left(\Delta A\right)_{\psi}=\left(A-\left\langle A\right\rangle \right)_{\psi}\le\sqrt{\frac{1}{2}\left\langle C\right\rangle _{\psi}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\left[A,B\right]=iC$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle \left(\Delta A\right)^{2}\right\rangle \left\langle \left(\Delta B\right)^{2}\right\rangle \ge\frac{1}{4}\left|\left\langle C\right\rangle \right|^{2}$
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename squeezing.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Quadrature 
+\begin_inset Formula $x_{1}=\frac{1}{2}\left(a+a^{\dagger}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\frac{1}{2i}\left(a-a^{\dagger}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Squeezing
+\begin_inset space ~
+\end_inset
+
+operator 
+\begin_inset Formula $S(x)=\exp\left[\frac{1}{2}\left(x^{*}a^{2}-xa^{\dagger2}\right)\right]$
+\end_inset
+
+ where 
+\begin_inset Formula $x=re^{i\varphi}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+squeezing parameter
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename squeezing2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Representations
+\end_layout
+
+\begin_layout Description
+P-representation 
+\begin_inset Formula $\rho=\int P(\alpha)\left|\alpha\right\rangle \left\langle \alpha\right|d^{2}\alpha$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\[
+P(\alpha)=\frac{e^{\left|\alpha\right|^{2}}}{\pi^{2}}\int e^{\left|u\right|^{2}}\left\langle -u\right|\rho\left|u\right\rangle e^{u^{*}\alpha-u\alpha^{*}}d^{2}u
+\]
+
+\end_inset
+
+
+\emph on
+Note: 
+\begin_inset Formula $P(\alpha)<0$
+\end_inset
+
+ implies nonclassicality.
+ 
+\end_layout
+
+\begin_layout Description
+Wigner 
+\begin_inset Formula 
+\[
+W(q,p)=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\left\langle q+\frac{x}{2}\right|\rho\left|q-\frac{x}{2}\right\rangle e^{ipx/\hbar}dx
+\]
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Optical-Equivalence
+\begin_inset space ~
+\end_inset
+
+theorem For a normal ordered function 
+\begin_inset Formula $G(a,a^{\dagger})$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\left\langle G\left(a,a^{\dagger}\right)\right\rangle =\left\langle G\left(\alpha,\alpha^{*}\right)\right\rangle .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Optical Bloch equations
+\end_layout
+
+\begin_layout Description
+Regular
+\begin_inset space ~
+\end_inset
+
+representation 
+\begin_inset Formula 
+\[
+\begin{split}\dot{\rho}_{ee} & =-\Gamma\rho_{ee}+i\frac{\Omega}{2}\left(\rho_{eg}-\rho_{ge}\right)\\
+\dot{\rho}_{gg} & =1-\rho_{ee}\\
+\dot{\rho}_{eg} & =-\left(\gamma_{\perp}-i\Delta\right)\rho_{eg}+i\frac{\Omega}{2}\left(\rho_{ee}-\rho_{gg}\right)\\
+\dot{\rho}_{ge} & =-\left(\gamma_{\perp}+i\Delta\right)\rho_{ge}-i\frac{\Omega}{2}\left(\rho_{ee}-\rho_{gg}\right).
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Bloch-vector
+\begin_inset space ~
+\end_inset
+
+representation 
+\begin_inset Formula 
+\[
+\begin{aligned}\partial_{t}\left\langle \sigma_{x}\right\rangle  & =\Delta\left\langle \sigma_{y}\right\rangle -\gamma_{\perp}\left\langle \sigma_{x}\right\rangle \\
+\partial_{t}\left\langle \sigma_{y}\right\rangle  & =-\Delta\left\langle \sigma_{x}\right\rangle -\Omega\left\langle \sigma_{z}\right\rangle -\gamma_{\perp}\left\langle \sigma_{y}\right\rangle \\
+\partial_{t}\left\langle \sigma_{z}\right\rangle  & =\Omega\left\langle \sigma_{y}\right\rangle -\Gamma\left(\left\langle \sigma_{z}\right\rangle +1\right)
+\end{aligned}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\begin{split}\left\langle \sigma_{x}\right\rangle  & =\rho_{eg}+\rho_{ge}\\
+\left\langle \sigma_{y}\right\rangle  & =i\left(\rho_{eg}-\rho_{ge}\right)\\
+\left\langle \sigma_{z}\right\rangle  & =\rho_{ee}-\rho_{gg}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Example:
+\begin_inset space ~
+\end_inset
+
+no
+\begin_inset space ~
+\end_inset
+
+drive If we take 
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \sigma_{x}\right\rangle  & =-\gamma_{\perp}\left\langle \sigma_{x}\right\rangle \\
+\partial_{t}\left\langle \sigma_{y}\right\rangle  & =-\gamma_{\perp}\left\langle \sigma_{y}\right\rangle \\
+\partial_{t}\left\langle \sigma_{z}\right\rangle  & =-\Gamma\left(\left\langle \sigma_{z}\right\rangle +1\right)
+\end{align}
+
+\end_inset
+
+with initial condition 
+\begin_inset Formula $\left\langle \sigma_{z}\right\rangle =1$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{equation}
+\left\langle \sigma_{z}\right\rangle =2e^{-\Gamma t}-1.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Atom-field interactions
+\end_layout
+
+\begin_layout Description
+Rotating-wave-approximation RWA is safe when 
+\begin_inset Formula $\Delta\ll\omega,\omega_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega_{0}\ll\omega_{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+Rabi
+\begin_inset space ~
+\end_inset
+
+excited
+\begin_inset space ~
+\end_inset
+
+state 
+\begin_inset Formula 
+\begin{equation}
+\rho_{ee}\left(t\right)=\frac{\nu^{2}}{\Omega_{R}^{2}\hbar^{2}}\sin^{2}\left(\frac{\Omega_{R}t}{2}\right)\xrightarrow{\Delta=0}\sin^{2}\left(\frac{\nu t}{2\hbar}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\pi$
+\end_inset
+
+-pulse 
+\begin_inset Formula $\left|g\right\rangle \rightarrow\left|e\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+, 
+\begin_inset Formula $T_{\pi}=\frac{1}{2}\left(\frac{2\pi}{\Omega_{R}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\frac{\pi}{2}$
+\end_inset
+
+-pulse 
+\begin_inset Formula $\left|g\right\rangle \rightarrow\frac{1}{\sqrt{2}}\left(\left|g\right\rangle +\left|e\right\rangle \right)$
+\end_inset
+
+,
+\begin_inset Formula $T_{\pi/2}=\frac{1}{4}\left(\frac{2\pi}{\Omega_{R}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Linewidth For a field that decays as 
+\begin_inset Formula 
+\[
+E(t)=E_{0}\Theta(t)e^{-\frac{\Gamma}{2}t}e^{i\omega_{0}t},
+\]
+
+\end_inset
+
+We can take a Fourier transform,
+\begin_inset Formula 
+\[
+F(\omega)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-i\omega t}f(t)dt
+\]
+
+\end_inset
+
+to obtain
+\begin_inset Formula 
+\begin{align*}
+E(\omega) & =-\frac{E_{0}}{\sqrt{2\pi}}\frac{1}{i\left(\omega_{0}-\omega\right)-\frac{\Gamma}{2}}
+\end{align*}
+
+\end_inset
+
+so that 
+\begin_inset Formula 
+\[
+I\left(\omega\right)=\left|E(\omega)\right|^{2}=\frac{E_{0}^{2}}{2\pi}\frac{1}{\left(\omega_{0}-\omega\right)^{2}-\left(\frac{\Gamma}{2}\right)^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Models
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N\ge1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no RWA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quantum Rabi
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dicke
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RWA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jaynes-Cummings
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tavis-Cummings
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Identities
+\end_layout
+
+\begin_layout Description
+Baker-Campbell-Hausdorff 
+\begin_inset Formula $e^{x}e^{y}=e^{z}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+z=x+y+\frac{1}{2}\left[x,y\right]+\frac{1}{12}\left(\left[x,\left[x,y\right]\right]+\left[y,\left[y,x\right]\right]\right)+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
