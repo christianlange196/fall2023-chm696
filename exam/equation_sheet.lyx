@@ -89,6 +89,22 @@ Quantum light
 \end_layout
 
 \begin_layout Description
+Photon
+\begin_inset space ~
+\end_inset
+
+properties Energy:
+\begin_inset Formula $E=\hbar\omega=hf\rightarrow\frac{1}{2}mv^{2},k_{B}T$
+\end_inset
+
+, momentum: 
+\begin_inset Formula $p=h/\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
 Single-photon
 \begin_inset space ~
 \end_inset
@@ -184,6 +200,23 @@ Variances For a field operator
 \end_layout
 
 \begin_layout Description
+Von-Neumann
+\begin_inset space ~
+\end_inset
+
+Entroyp 
+\begin_inset Formula $S=-k_{B}\sum_{k}\rho_{k}^{\text{(diag)}}\ln\rho_{k}^{\text{(diag)}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\rho_{k}^{\text{(diag)}}$
+\end_inset
+
+ is diagonalized.
+ 
+\end_layout
+
+\begin_layout Description
 Pure
 \begin_inset space ~
 \end_inset
@@ -233,7 +266,7 @@ Variance
 \end_inset
 
  
-\begin_inset Formula $\left\langle \left(\Delta\alpha\right)^{2}\right\rangle =\overline{n}$
+\begin_inset Formula $\left\langle \left(\Delta n\right)^{2}\right\rangle =\left|\alpha\right|^{2}=\overline{n}$
 \end_inset
 
 .
@@ -379,7 +412,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename squeezing.png
-	scale 40
+	scale 75
 
 \end_inset
 
@@ -441,7 +474,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename squeezing2.png
-	scale 40
+	scale 75
 
 \end_inset
 
@@ -489,7 +522,19 @@ W(q,p)=\frac{1}{2\pi\hbar}\int_{-\infty}^{\infty}\left\langle q+\frac{x}{2}\righ
 
 \end_inset
 
-.
+
+\end_layout
+
+\begin_layout Description
+Q-function 
+\begin_inset Formula 
+\[
+Q_{\rho}(\alpha)=\frac{1}{\pi}\left\langle \alpha\right|\rho\left|\alpha\right\rangle 
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Description
@@ -506,6 +551,39 @@ theorem For a normal ordered function
 \[
 \left\langle G\left(a,a^{\dagger}\right)\right\rangle =\left\langle G\left(\alpha,\alpha^{*}\right)\right\rangle .
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Q-function
+\begin_inset space ~
+\end_inset
+
+(Fock) 
+\begin_inset Formula 
+\[
+Q_{n}(\alpha)=\frac{1}{\pi}\left|\left\langle \left.\alpha\right|n\right\rangle \right|^{2}=\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}}{2}\right)\frac{\left|\alpha\right|^{2n}}{\sqrt{n!}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Q-function
+\begin_inset space ~
+\end_inset
+
+(coherent) 
+\begin_inset Formula 
+\begin{align*}
+Q_{\beta}\left(\alpha\right) & =\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}+\left|\beta\right|^{2}}{2}\right)\sum_{n,m}\frac{\alpha^{n}\beta^{m}}{\sqrt{n!m!}}\delta_{nm}\\
+ & =\frac{1}{\pi}\exp\left(-\frac{\left|\alpha\right|^{2}+\left|\beta\right|^{2}}{2}\right)\left(\alpha\beta\right)^{n}
+\end{align*}
 
 \end_inset
 
@@ -585,11 +663,11 @@ drive If we take
 
 ,
 \begin_inset Formula 
-\begin{align}
+\begin{align*}
 \partial_{t}\left\langle \sigma_{x}\right\rangle  & =-\gamma_{\perp}\left\langle \sigma_{x}\right\rangle \\
 \partial_{t}\left\langle \sigma_{y}\right\rangle  & =-\gamma_{\perp}\left\langle \sigma_{y}\right\rangle \\
 \partial_{t}\left\langle \sigma_{z}\right\rangle  & =-\Gamma\left(\left\langle \sigma_{z}\right\rangle +1\right)
-\end{align}
+\end{align*}
 
 \end_inset
 
@@ -599,9 +677,9 @@ with initial condition
 
 , we have 
 \begin_inset Formula 
-\begin{equation}
+\[
 \left\langle \sigma_{z}\right\rangle =2e^{-\Gamma t}-1.
-\end{equation}
+\]
 
 \end_inset
 
@@ -636,9 +714,9 @@ excited
 
 state 
 \begin_inset Formula 
-\begin{equation}
+\[
 \rho_{ee}\left(t\right)=\frac{\nu^{2}}{\Omega_{R}^{2}\hbar^{2}}\sin^{2}\left(\frac{\Omega_{R}t}{2}\right)\xrightarrow{\Delta=0}\sin^{2}\left(\frac{\nu t}{2\hbar}\right)
-\end{equation}
+\]
 
 \end_inset
 
@@ -716,7 +794,7 @@ I\left(\omega\right)=\left|E(\omega)\right|^{2}=\frac{E_{0}^{2}}{2\pi}\frac{1}{\
 \end_layout
 
 \begin_layout Section*
-Models
+Other
 \end_layout
 
 \begin_layout Standard
@@ -826,10 +904,6 @@ Tavis-Cummings
 
 \end_layout
 
-\begin_layout Section*
-Identities
-\end_layout
-
 \begin_layout Description
 Baker-Campbell-Hausdorff 
 \begin_inset Formula $e^{x}e^{y}=e^{z}$
@@ -844,6 +918,115 @@ z=x+y+\frac{1}{2}\left[x,y\right]+\frac{1}{12}\left(\left[x,\left[x,y\right]\rig
 \end_inset
 
 
+\end_layout
+
+\begin_layout Description
+One-atom
+\begin_inset space ~
+\end_inset
+
+maser (a) Rydberg states are strongly coupled to the radiation field.
+ (b) Rydberg states have transitions to neighboring levels in the region
+ of millimeter waves, allowing the use of cavities with large low-order
+ modes for long interaction times.
+ (c) Rydberg atoms have long spontaneous lifetimes.
+ They measured a linewidth broadening due to the cavity interaction.
+ 
+\end_layout
+
+\begin_layout Description
+Vacuum
+\begin_inset space ~
+\end_inset
+
+fluctuations (a) The question is whether vacuum fluctuations an be measured
+ in fre space.
+ (b) The idea is to measure fluctuations via changes of the refractive index
+ of a material.
+ (c) The authors vary mode width and temporal length to measure fluctuations.
+ (d) The problem with shot noise is that it is an additional fluctuation
+ source.
+ 
+\end_layout
+
+\begin_layout Description
+Jaynes-Cummings For a Hamiltonian 
+\begin_inset Formula $H=\left(\begin{array}{cc}
+\Delta/2 & J\\
+J & -\Delta/2
+\end{array}\right)$
+\end_inset
+
+, the eigenstates are 
+\begin_inset Formula $\left|e\right\rangle =\left(\begin{array}{c}
+1\\
+1
+\end{array}\right),\left|g\right\rangle =\left(\begin{array}{c}
+0\\
+0
+\end{array}\right)$
+\end_inset
+
+,
+\begin_inset Formula $\left|+\right\rangle =\cos\theta\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)+\sin\theta\left(\begin{array}{c}
+0\\
+1
+\end{array}\right)$
+\end_inset
+
+,
+\begin_inset Formula $\left|-\right\rangle =\cos\theta\left(\begin{array}{c}
+0\\
+1
+\end{array}\right)-\sin\theta\left(\begin{array}{c}
+1\\
+0
+\end{array}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $E_{e,g}=0$
+\end_inset
+
+, 
+\begin_inset Formula $E_{\pm}=\pm\frac{\Delta}{2}$
+\end_inset
+
+.
+ Also, 
+\begin_inset Formula $\tan\theta=\frac{2J}{\Delta+\Delta^{\prime}}$
+\end_inset
+
+ where 
+\begin_inset Formula $\Delta^{\prime}=\sqrt{\Delta^{2}+4J^{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+2x2
+\begin_inset space ~
+\end_inset
+
+matrices The eigenvalues of a 2x2 are 
+\begin_inset Formula $m\pm\sqrt{m^{2}-p}$
+\end_inset
+
+ where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the mean of the diagonal elements and 
+\begin_inset Formula $p$
+\end_inset
+
+ is the determinant.
+ 
 \end_layout
 
 \end_body
