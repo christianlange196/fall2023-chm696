@@ -179,6 +179,54 @@ Appendix
 \end_inset
 
 
+\begin_inset Formula 
+\begin{align}
+\sigma & =\left(\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right)\\
+\sigma^{\dagger} & =\left(\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right)
+\end{align}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma^{\dagger}\sigma=\left(\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma\sigma^{\dagger}=\left(\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sigma_{z}=\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
