@@ -216,13 +216,11 @@ sys.evolve_pulse(tlist, Omega=[np.pi/2])
 sys.animate_bloch('single_atom.gif', duration=5)
 ```
 
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
-    
 
 <figure>
-    <img src="single_atom.gif" alt="drawing" width="400"/>
+    <img src="files/single_atom.gif" alt="drawing" width="400"/>
 </figure>
+
 
 <h2>
   <center>
@@ -258,7 +256,7 @@ sys.animate_bloch('two_atoms.gif', duration=10)
     
 
 <figure>
-    <img src="two_atoms.gif" alt="drawing" width="400"/>
+    <img src="files/two_atoms.gif" alt="drawing" width="400"/>
 </figure>
 
 <h2>
@@ -296,15 +294,8 @@ plt.legend(loc='upper right')
 ```
 
 
-
-
-    <matplotlib.legend.Legend at 0x2898343b390>
-
-
-
-
     
-![png](chm696_final_project_files/chm696_final_project_11_1.png)
+![png](files/chm696_final_project_11_1.png)
     
 
 
@@ -316,13 +307,10 @@ sys.H = qsum([omega[i] * sys.sm_list[i].dag() * sys.sm_list[i] for i in range(sy
 sys.pulse_sequence(4, [np.pi/2, np.pi, np.pi/2], points_pulse=20, points_evolve=40)
 sys.animate_bloch('inhomogeneous_spin_echo.gif', duration=60)
 ```
-
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
     
 
 <figure>
-    <img src="inhomogeneous_spin_echo.gif" alt="drawing" width="400"/>
+    <img src="files/inhomogeneous_spin_echo.gif" alt="drawing" width="400"/>
 </figure>
 
 
@@ -334,12 +322,9 @@ sys.pulse_sequence(4, [np.pi/2, np.pi/2], points_pulse=20, points_evolve=40)
 sys.animate_bloch('inhomogeneous_ramsey.gif', duration=60)
 ```
 
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
-    
 
 <figure>
-    <img src="inhomogeneous_ramsey.gif" alt="drawing" width="400"/>
+    <img src="files/inhomogeneous_ramsey.gif" alt="drawing" width="400"/>
 </figure>
 
 
@@ -488,7 +473,7 @@ plt.savefig('dynamic_decoupling.png', dpi=300, bbox_inches='tight')
 
 
     
-![png](chm696_final_project_files/chm696_final_project_17_0.png)
+![png](files/chm696_final_project_17_0.png)
     
 
 
@@ -512,7 +497,7 @@ fig.savefig('dynamic_decoupling_pulses.png', dpi=300, bbox_inches='tight')
 
 
     
-![png](chm696_final_project_files/chm696_final_project_18_0.png)
+![png](files/chm696_final_project_18_0.png)
     
 
 
@@ -536,12 +521,10 @@ sys.evolve(tlist, c_ops=[np.sqrt(gamma)*sys.sm_list[0]])
 sys.animate_bloch('no_dynamic_decoupling.gif', duration=60)
 ```
 
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
     
 
 <figure>
-    <img src="no_dynamic_decoupling.gif" alt="drawing" width="400"/>
+    <img src="files/no_dynamic_decoupling.gif" alt="drawing" width="400"/>
 </figure>
 
 
@@ -566,12 +549,10 @@ for _ in range(50):
 sys.animate_bloch('dynamic_decoupling.gif', duration=60)
 ```
 
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
     
 
 <figure>
-    <img src="dynamic_decoupling.gif" alt="drawing" width="400"/>
+    <img src="files/dynamic_decoupling.gif" alt="drawing" width="400"/>
 </figure>
 
 <h2>
@@ -610,19 +591,8 @@ plt.ylabel(r'$\sigma^{1}_{z}$')
 plt.legend(loc='upper right')
 ```
 
-    WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
     
-
-
-
-
-    <matplotlib.legend.Legend at 0x289f8363390>
-
-
-
-
-    
-![png](chm696_final_project_files/chm696_final_project_24_2.png)
+![png](files/chm696_final_project_24_2.png)
     
 
 
@@ -636,12 +606,8 @@ sys.evolve_pulse(np.linspace(0,1,5), Omega=[np.pi/2, np.pi/2])
 sys.animate_bloch('Ramsey_yupeng.gif', duration=200)
 ```
 
-    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-      images.append(imageio.imread(filename))
-    
-
 <figure>
-    <img src="Ramsey_yupeng.gif" alt="drawing" width="400"/>
+    <img src="files/Ramsey_yupeng.gif" alt="drawing" width="400"/>
 </figure>
 
 We can apply spin echo sequence for both spins. Note that $\sigma_z^1\sigma_z^2$ is preserved but $\sigma_z^1$ and $\sigma_z^2$ are not.
@@ -709,16 +675,8 @@ plt.legend(loc='upper right')
 
 ```
 
-
-
-
-    <matplotlib.legend.Legend at 0x28992c13390>
-
-
-
-
     
-![png](chm696_final_project_files/chm696_final_project_28_1.png)
+![png](files/chm696_final_project_28_1.png)
     
 
 
@@ -785,16 +743,7 @@ plt.ylabel(r'expectation value')
 plt.legend(loc='upper right')
 
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x28991fe1450>
-
-
-
-
     
-![png](chm696_final_project_files/chm696_final_project_30_1.png)
+![png](files/chm696_final_project_30_1.png)
     
 
