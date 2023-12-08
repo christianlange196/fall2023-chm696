@@ -247,7 +247,7 @@ Because
 \end_inset
 
 , we can easily see that 
-\begin_inset Formula $e^{-i\Gamma\sigma_{x}^{\dagger}\sigma\sigma_{x}}=e^{\Gamma\sigma}$
+\begin_inset Formula $e^{-i\Gamma\sigma_{x}^{\dagger}\sigma\sigma_{x}}=e^{-i\Gamma\sigma^{\dagger}}$
 \end_inset
 
 .
@@ -258,13 +258,17 @@ Because
 -pulses cancels out the coupling with the bath, such that
 \begin_inset Formula 
 \begin{align}
-\left|\psi^{\prime}\right\rangle  & =e^{-i\Gamma\sigma t}e^{i\Gamma\sigma t}\left|\psi\right\rangle \\
- & =\left|\psi\right\rangle 
+\left|\psi^{\prime}\right\rangle  & =e^{-i\Gamma\sigma t}e^{-i\Gamma\sigma^{\dagger}t}\left|\psi\right\rangle .
 \end{align}
 
 \end_inset
 
-and the quantum state is unchanged.
+This describes a process where the quantum state first evolves according
+ to the raising operator 
+\begin_inset Formula $\sigma^{\dagger}$
+\end_inset
+
+, and then the lowering operator.
  This treatment does not include evolution according to the system Hamiltonian.
  Nevertheless, it illustrates that, for certain interactions, a sequence
  of rapid 
