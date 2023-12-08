@@ -25,10 +25,21 @@ import PIL
 </h2>
 
 In the rotating wave approximation, and transformed to the rotating frame of the laser, the Hamiltonian of a collection of two-level atoms coupled to a classical light field is 
-$$ H = H_{0} + H_{I} + H_{D} $$
-where 
-$$ H_{0} = \sum_{i} \hbar\Delta_{i} \sigma_{i}^{\dagger} \sigma_{i} $$
-$$ H_{D} =  \sum_{i} \Omega_{i} \left(\sigma_{i} + \sigma_{i}^{\dagger}\right). $$
+
+$$ 
+H = H_{0} + H_{I} + H_{D} 
+$$
+
+where
+
+$$ 
+H_{0} = \sum_{i} \hbar\Delta_{i} \sigma_{i}^{\dagger} \sigma_{i} 
+$$
+
+$$ 
+H_{D} =  \sum_{i} \Omega_{i} \left(\sigma_{i} + \sigma_{i}^{\dagger}\right). 
+$$
+
 Here, $\hbar\Delta_{i}$ is the transition energy of the $i$th atom in the rotating frame of the laser, $\Omega_{i}$ is the Rabi frequency which quantifies the coupling strength between the atom and the light, and $H_{I}$ contains all interaction terms between the atoms.
 
 If we pulse the laser on and off much faster than the time dynamics of the system, then the drive term $H_{D}$ results in a rotation of the quantum state around the x-axis of the Bloch sphere. The magnitude of $\Omega_{i}$ and the time of the pulse determine the degree of rotation.
