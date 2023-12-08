@@ -15,6 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from qutip import *
 from IPython.display import Image, Math, Latex, display
+import PIL
 ```
 
 <h2>
@@ -27,7 +28,7 @@ In the rotating wave approximation, and transformed to the rotating frame of the
 $$ H = H_{0} + H_{I} + H_{D} $$
 where 
 $$ H_{0} = \sum_{i} \hbar\Delta_{i} \sigma_{i}^{\dagger} \sigma_{i} $$
-$$ H_{D} = \Omega_{i} \sum_{i} \left(\sigma_{i} + \sigma_{i}^{\dagger}\right) $$
+$$ H_{D} =  \sum_{i} \Omega_{i} \left(\sigma_{i} + \sigma_{i}^{\dagger}\right). $$
 Here, $\hbar\Delta_{i}$ is the transition energy of the $i$th atom in the rotating frame of the laser, $\Omega_{i}$ is the Rabi frequency which quantifies the coupling strength between the atom and the light, and $H_{I}$ contains all interaction terms between the atoms.
 
 If we pulse the laser on and off much faster than the time dynamics of the system, then the drive term $H_{D}$ results in a rotation of the quantum state around the x-axis of the Bloch sphere. The magnitude of $\Omega_{i}$ and the time of the pulse determine the degree of rotation.
@@ -67,7 +68,7 @@ class N_dipole_system:
         ]
 
 
-        ### initial states ###
+        # initial states 
         self.ket_excited = tensor([basis(2,1) for _ in range(self.N)])
         self.ket_ground = tensor([basis(2,0) for _ in range(self.N)])
 
@@ -186,7 +187,7 @@ class N_dipole_system:
                     except:
                         print("Error making bloch sphere at t = ", self.times[i])
             images.append(imageio.imread(filename))
-        imageio.mimsave(fname, images, duration=duration)
+        imageio.mimsave(fname, images, duration=duration, loop=0)
 ```
 
 <h2>
@@ -215,17 +216,13 @@ sys.evolve_pulse(tlist, Omega=[np.pi/2])
 sys.animate_bloch('single_atom.gif', duration=5)
 ```
 
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
 <figure>
     <img src="single_atom.gif" alt="drawing" width="400"/>
 </figure>
-    
-
-
-```python
-Image(filename='single_atom.gif')
-```
-
-
 
 <h2>
   <center>
@@ -255,6 +252,14 @@ sys.evolve(tlist)
 sys.evolve_pulse(tlist, Omega=[np.pi/2, 0])
 sys.animate_bloch('two_atoms.gif', duration=10)
 ```
+
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
+<figure>
+    <img src="two_atoms.gif" alt="drawing" width="400"/>
+</figure>
 
 <h2>
     <center>
@@ -290,6 +295,14 @@ plt.ylabel(r'$\rho_{ee}$')
 plt.legend(loc='upper right')
 ```
 
+
+
+
+    <matplotlib.legend.Legend at 0x2898343b390>
+
+
+
+
     
 ![png](chm696_final_project_files/chm696_final_project_11_1.png)
     
@@ -304,19 +317,26 @@ sys.pulse_sequence(4, [np.pi/2, np.pi, np.pi/2], points_pulse=20, points_evolve=
 sys.animate_bloch('inhomogeneous_spin_echo.gif', duration=60)
 ```
 
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
 <figure>
     <img src="inhomogeneous_spin_echo.gif" alt="drawing" width="400"/>
 </figure>
 
 
-
 ```python
+omega = [1, 1.2, 1.4, 1.6, 1.8, 2, 2.2]
 sys = N_dipole_system(6)
 sys.H = qsum([omega[i] * sys.sm_list[i].dag() * sys.sm_list[i] for i in range(sys.N)])
 sys.pulse_sequence(4, [np.pi/2, np.pi/2], points_pulse=20, points_evolve=40)
 sys.animate_bloch('inhomogeneous_ramsey.gif', duration=60)
-Image(filename='inhomogeneous_ramsey.gif')
 ```
+
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
 
 <figure>
     <img src="inhomogeneous_ramsey.gif" alt="drawing" width="400"/>
@@ -404,9 +424,6 @@ $$
 This describes a process where the quantum state first evolves according to the raising operator $\sigma^{\dagger}$, and then the lowering operator. This treatment does not include evolution according to the system Hamiltonian. Nevertheless, it illustrates that, for certain interactions, a sequence of rapid $\pi$-pulses can cancel the evolution. 
 
 
-
-
-
 ```python
 tlist = np.linspace(0, 50, 300)
 tlist_pulse = [0,.1]
@@ -471,7 +488,7 @@ plt.savefig('dynamic_decoupling.png', dpi=300, bbox_inches='tight')
 
 
     
-![png](chm696_final_project_files/chm696_final_project_16_0.png)
+![png](chm696_final_project_files/chm696_final_project_17_0.png)
     
 
 
@@ -495,7 +512,7 @@ fig.savefig('dynamic_decoupling_pulses.png', dpi=300, bbox_inches='tight')
 
 
     
-![png](chm696_final_project_files/chm696_final_project_17_0.png)
+![png](chm696_final_project_files/chm696_final_project_18_0.png)
     
 
 
@@ -519,17 +536,13 @@ sys.evolve(tlist, c_ops=[np.sqrt(gamma)*sys.sm_list[0]])
 sys.animate_bloch('no_dynamic_decoupling.gif', duration=60)
 ```
 
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
 <figure>
     <img src="no_dynamic_decoupling.gif" alt="drawing" width="400"/>
 </figure>
-    
-
-
-```python
-Image(filename='no_dynamic_decoupling.gif')
-```
-
-
 
 
 ```python
@@ -553,11 +566,13 @@ for _ in range(50):
 sys.animate_bloch('dynamic_decoupling.gif', duration=60)
 ```
 
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
 <figure>
     <img src="dynamic_decoupling.gif" alt="drawing" width="400"/>
 </figure>
-
-
 
 <h2>
     <center>
@@ -595,11 +610,19 @@ plt.ylabel(r'$\sigma^{1}_{z}$')
 plt.legend(loc='upper right')
 ```
 
+    WARNING:matplotlib.legend:No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+    
+
+
+
+
+    <matplotlib.legend.Legend at 0x289f8363390>
+
 
 
 
     
-![png](chm696_final_project_files/chm696_final_project_23_2.png)
+![png](chm696_final_project_files/chm696_final_project_24_2.png)
     
 
 
@@ -613,12 +636,13 @@ sys.evolve_pulse(np.linspace(0,1,5), Omega=[np.pi/2, np.pi/2])
 sys.animate_bloch('Ramsey_yupeng.gif', duration=200)
 ```
 
+    C:\Users\chris\AppData\Local\Temp\ipykernel_24108\2803044176.py:151: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
+      images.append(imageio.imread(filename))
+    
+
 <figure>
     <img src="Ramsey_yupeng.gif" alt="drawing" width="400"/>
 </figure>
-    
-
-
 
 We can apply spin echo sequence for both spins. Note that $\sigma_z^1\sigma_z^2$ is preserved but $\sigma_z^1$ and $\sigma_z^2$ are not.
 
@@ -688,13 +712,13 @@ plt.legend(loc='upper right')
 
 
 
-    <matplotlib.legend.Legend at 0x289f6e43390>
+    <matplotlib.legend.Legend at 0x28992c13390>
 
 
 
 
     
-![png](chm696_final_project_files/chm696_final_project_27_1.png)
+![png](chm696_final_project_files/chm696_final_project_28_1.png)
     
 
 
@@ -765,12 +789,12 @@ plt.legend(loc='upper right')
 
 
 
-    <matplotlib.legend.Legend at 0x289f9691950>
+    <matplotlib.legend.Legend at 0x28991fe1450>
 
 
 
 
     
-![png](chm696_final_project_files/chm696_final_project_29_1.png)
+![png](chm696_final_project_files/chm696_final_project_30_1.png)
     
 
