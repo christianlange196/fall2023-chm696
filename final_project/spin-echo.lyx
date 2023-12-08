@@ -90,143 +90,189 @@ General spin echo
 Christian Lange
 \end_layout
 
-\begin_layout Section
-Two non-interacting atoms
+\begin_layout Section*
+Review and introduction
 \end_layout
 
 \begin_layout Standard
-The Hamiltonian for two independent atoms is 
-\begin_inset Formula $(\hbar=1)$
-\end_inset
-
-
+In the rotating wave approximation, and transformed to the rotating frame
+ of the laser, the Hamiltonian of an collection of two-level atoms coupled
+ to a classical light field is 
 \begin_inset Formula 
 \begin{equation}
-H=\sum_{i}^{2}\omega_{i}\sigma_{i}^{\dagger}\sigma+\Omega_{R}(t)\sum_{i}^{2}\left(\sigma_{i}+\sigma_{i}^{\dagger}\right).
+H=H_{0}+H_{I}+H_{D}
 \end{equation}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Section
-Two interacting atoms
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-H=\sum_{i}^{2}\omega_{i}\sigma_{i}^{\dagger}\sigma_{i}+\sum_{i}^{2}J_{ij}\sigma_{i}^{\dagger}\sigma_{j}+\Omega_{R}\sum_{i}^{2}\left(\sigma_{i}+\sigma_{i}^{\dagger}\right)
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Case 1: 
-\begin_inset Formula $\omega_{i}=\omega_{j}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Take the undriven Hamiltonian 
-\begin_inset Formula 
-\begin{equation}
-H=\sum_{i}^{2}\omega_{i}\sigma_{i}^{\dagger}\sigma+\sum_{i}^{2}J_{ij}\sigma_{i}^{\dagger}\sigma_{j}
-\end{equation}
-
-\end_inset
-
-and ask this question: What happens if you apply a 
-\begin_inset Formula $\pi/2$
-\end_inset
-
- pulse, wait a time 
-\begin_inset Formula $\tau$
-\end_inset
-
-, and apply another 
-\begin_inset Formula $\pi/2$
-\end_inset
-
- pulse.
- What is the excited-state population? The time evolution is (ignoring decay)
-\begin_inset Formula 
-\begin{equation}
-\partial_{t}\rho=-i\left[H,\rho\right]
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Appendix
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\sigma_{z}=\sigma^{\dagger}\sigma-\sigma\sigma^{\dagger}
-\end{equation}
-
-\end_inset
-
-
+where 
 \begin_inset Formula 
 \begin{align}
-\sigma & =\left(\begin{array}{cc}
-0 & 0\\
-1 & 0
-\end{array}\right)\\
-\sigma^{\dagger} & =\left(\begin{array}{cc}
-0 & 1\\
-0 & 0
-\end{array}\right)
+H_{0} & =\sum_{i}\hbar\omega_{i}\sigma_{i}^{\dagger}\sigma_{i}\\
+H_{D} & =\Omega_{i}\sum_{i}\left(\sigma_{i}+\sigma_{i}^{\dagger}\right)
 \end{align}
 
 \end_inset
 
+where 
+\begin_inset Formula $\hbar\omega_{i}$
+\end_inset
 
+ is the transition energy of the 
+\begin_inset Formula $i$
+\end_inset
+
+th atom, 
+\begin_inset Formula $\Omega_{i}$
+\end_inset
+
+ is Rabi frequency which quantifies the coupling strength between the atom
+ and the light, and 
+\begin_inset Formula $H_{I}$
+\end_inset
+
+ contains all interaction terms between the atoms.
+ If we pulse the laser on and off much faster than the time dynamics of
+ the system, then the drive term 
+\begin_inset Formula $H_{D}$
+\end_inset
+
+ results in a rotation of the quantum state around the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis of the Bloch sphere.
+ The magnitude of 
+\begin_inset Formula $\Omega_{i}$
+\end_inset
+
+ and the time of the pulse determine the degree of rotation.
+ 
+\end_layout
+
+\begin_layout Section*
+Dynamic decoupling
+\end_layout
+
+\begin_layout Standard
+Suppose a system is coupled to a bath via a Hamiltonian 
+\begin_inset Formula $H_{B}$
+\end_inset
+
+.
+ For example, 
+\begin_inset Formula $H_{B}$
+\end_inset
+
+ might be something like 
+\begin_inset Formula $\Gamma\sigma$
+\end_inset
+
+, which describes decay of an atomic state at a rate of 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ The evolution of the system is given in this case by 
 \begin_inset Formula 
 \begin{equation}
-\sigma^{\dagger}\sigma=\left(\begin{array}{cc}
-1 & 0\\
-0 & 0
-\end{array}\right)
+\left|\psi^{\prime}\right\rangle =e^{-i\Gamma\sigma t}\left|\psi\right\rangle .
 \end{equation}
 
 \end_inset
 
+We now consider a 
+\begin_inset Formula $\pi$
+\end_inset
 
+-pulse operator which rotates a state around the 
+\begin_inset Formula $x$
+\end_inset
+
+-axis of the Bloch sphere.
+ This operator is proportional to 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+.
+ A spin-echo sequence is represented by a sequence of 
+\begin_inset Formula $\sigma_{x}$
+\end_inset
+
+ operations and time evolutions
+\begin_inset Formula 
+\begin{align}
+\left|\psi^{\prime}\right\rangle  & =e^{-i\Gamma\sigma t}\sigma_{x}e^{-i\Gamma\sigma t}\sigma_{x}\left|\psi\right\rangle .
+\end{align}
+
+\end_inset
+
+We can expand the second exponential to obtain
 \begin_inset Formula 
 \begin{equation}
-\sigma\sigma^{\dagger}=\left(\begin{array}{cc}
+\left|\psi^{\prime}\right\rangle =e^{-i\Gamma\sigma t}\sum_{n}\frac{\left(-i\Gamma\right)^{n}}{n!}\sigma_{x}\sigma^{n}\sigma_{x}\left|\psi\right\rangle .
+\end{equation}
+
+\end_inset
+
+Because 
+\begin_inset Formula $\sigma_{x}^{2}=\mathbb{I}$
+\end_inset
+
+, we can see that 
+\begin_inset Formula $\sigma_{x}\sigma^{n}\sigma_{x}=\left(\sigma_{x}\sigma\sigma_{x}\right)\left(\sigma_{x}\sigma\sigma_{x}\right)\cdots=\left(\sigma_{x}\sigma\sigma_{x}\right)^{n}$
+\end_inset
+
+, such that 
+\begin_inset Formula 
+\begin{align}
+\left|\psi^{\prime}\right\rangle  & =e^{-i\Gamma\sigma t}\sum_{n}\frac{\left(-i\Gamma\right)^{n}}{n!}\left(\sigma_{x}\sigma\sigma_{x}\right)^{n}\left|\psi\right\rangle \\
+ & =e^{-i\Gamma\sigma t}e^{-i\Gamma\sigma_{x}\sigma\sigma_{x}t}\left|\psi\right\rangle .
+\end{align}
+
+\end_inset
+
+ Using that 
+\begin_inset Formula $\sigma_{x}=\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma=\left(\begin{array}{cc}
 0 & 0\\
-0 & 1
-\end{array}\right)
-\end{equation}
-
+1 & 0
+\end{array}\right)$
 \end_inset
 
+, we can easily see that 
+\begin_inset Formula $e^{-i\Gamma\sigma_{x}^{\dagger}\sigma\sigma_{x}}=e^{\Gamma\sigma}$
+\end_inset
 
+.
+ The result is that the sequence of 
+\begin_inset Formula $\pi$
+\end_inset
+
+-pulses cancels out the coupling with the bath, such that
 \begin_inset Formula 
-\begin{equation}
-\sigma_{z}=\left(\begin{array}{cc}
-1 & 0\\
-0 & -1
-\end{array}\right)
-\end{equation}
+\begin{align}
+\left|\psi^{\prime}\right\rangle  & =e^{-i\Gamma\sigma t}e^{i\Gamma\sigma t}\left|\psi\right\rangle \\
+ & =\left|\psi\right\rangle 
+\end{align}
 
 \end_inset
 
+and the quantum state is unchanged.
+ This treatment does not include evolution according to the system Hamiltonian.
+ Nevertheless, it illustrates that, for certain interactions, a sequence
+ of rapid 
+\begin_inset Formula $\pi$
+\end_inset
 
+-pulses can cancel the evolution.
+ 
 \end_layout
 
 \end_body
